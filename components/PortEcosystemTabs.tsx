@@ -408,7 +408,7 @@ const CREW: CrewListing[] = [
 const TAB_HEADINGS: Record<TabId, { eyebrow: string; heading: string }> = {
   classifieds: {
     eyebrow: "CLASSIFIEDS",
-    heading: "Curated vessels, currently in port.",
+    heading: "Curated vessels, listed worldwide.",
   },
   services: {
     eyebrow: "SERVICES",

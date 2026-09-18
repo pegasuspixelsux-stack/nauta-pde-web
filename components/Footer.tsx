@@ -1,3 +1,5 @@
+import Logo from "./Logo";
+
 const COLUMNS = [
   {
     title: "Navigate",
@@ -31,9 +33,7 @@ export default function Footer() {
       <div className="mx-auto max-w-7xl px-6 py-20 sm:px-8 lg:px-12">
         <div className="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-4 lg:gap-8">
           <div className="lg:col-span-1">
-            <p className="text-[13px] font-semibold tracking-[0.2em] text-neutral-900">
-              NAUTA&nbsp;PDE
-            </p>
+            <Logo />
             <p className="mt-4 max-w-[220px] text-sm leading-relaxed text-neutral-500">
               A private yacht and sailing yacht dealership at the Port of
               Punta del Este.

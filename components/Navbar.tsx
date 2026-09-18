@@ -2,6 +2,8 @@
 
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
+import Logo from "./Logo";
+import { TABS, type TabId } from "@/lib/portEcosystem";
 
 const LINKS = [
   { label: "Fleet", href: "#fleet" },
@@ -10,7 +12,13 @@ const LINKS = [
   { label: "Inquiries", href: "#contact" },
 ];
 
-export default function Navbar() {
+export default function Navbar({
+  active,
+  onChange,
+}: {
+  active: TabId;
+  onChange: (id: TabId) => void;
+}) {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -30,11 +38,8 @@ export default function Navbar() {
       }`}
     >
       <nav className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6 sm:px-8 lg:px-12">
-        <a
-          href="#top"
-          className="text-[13px] font-semibold tracking-[0.2em] text-neutral-900"
-        >
-          NAUTA&nbsp;PDE
+        <a href="#top">
+          <Logo light={!scrolled} />
         </a>
 
         <ul className="hidden items-center gap-10 md:flex">
@@ -64,7 +69,9 @@ export default function Navbar() {
           onClick={() => setMenuOpen((v) => !v)}
           aria-expanded={menuOpen}
           aria-label="Toggle navigation menu"
-          className="flex h-9 w-9 items-center justify-center rounded-full text-neutral-900 md:hidden"
+          className={`flex h-9 w-9 items-center justify-center rounded-full transition-colors duration-300 md:hidden ${
+            scrolled || menuOpen ? "text-neutral-900" : "text-white"
+          }`}
         >
           <div className="flex flex-col gap-[5px]">
             <motion.span
@@ -114,6 +121,31 @@ export default function Navbar() {
                 </a>
               </li>
             </ul>
+
+            <div className="border-t border-neutral-100 px-6 py-4">
+              <p className="mb-3 text-[11px] font-medium tracking-[0.2em] text-neutral-400">
+                THE PORT ECOSYSTEM
+              </p>
+              <div className="flex flex-wrap gap-2">
+                {TABS.map((tab) => (
+                  <a
+                    key={tab.id}
+                    href="#fleet"
+                    onClick={() => {
+                      onChange(tab.id);
+                      setMenuOpen(false);
+                    }}
+                    className={`rounded-full px-3.5 py-1.5 text-[13px] font-medium transition-colors ${
+                      active === tab.id
+                        ? "bg-neutral-900 text-white"
+                        : "bg-neutral-100 text-neutral-600"
+                    }`}
+                  >
+                    {tab.label}
+                  </a>
+                ))}
+              </div>
+            </div>
           </motion.div>
         )}
       </AnimatePresence>
