@@ -194,14 +194,14 @@ export default function Hero({
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.32, ease: EASE }}
-          className="mt-6 flex flex-wrap justify-center gap-2"
+          className="mt-6 grid grid-cols-3 gap-2 sm:grid-cols-5"
         >
           {TABS.map((tab) => (
             <a
               key={tab.id}
               href="#fleet"
               onClick={() => onChange(tab.id)}
-              className={`inline-flex items-center gap-1.5 whitespace-nowrap rounded-full px-4 py-2 text-[13px] font-medium transition-colors duration-200 active:scale-[0.97] ${
+              className={`flex w-full items-center justify-center gap-1.5 whitespace-nowrap rounded-full px-3 py-2 text-[13px] font-medium transition-colors duration-200 active:scale-[0.97] ${
                 active === tab.id
                   ? "bg-white text-neutral-900"
                   : "border border-white/25 text-white/80 backdrop-blur-sm hover:border-white/50 hover:text-white"

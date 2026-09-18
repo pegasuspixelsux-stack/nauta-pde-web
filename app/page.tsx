@@ -5,6 +5,7 @@ import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import PortEcosystemTabs from "@/components/PortEcosystemTabs";
 import BodyContent from "@/components/BodyContent";
+import PortInfoSection from "@/components/PortInfoSection";
 import Footer from "@/components/Footer";
 import type { TabId } from "@/lib/portEcosystem";
 
@@ -18,6 +19,7 @@ export default function Home() {
         <Hero active={active} onChange={setActive} />
         <PortEcosystemTabs active={active} />
         <BodyContent />
+        <PortInfoSection />
       </main>
       <Footer />
     </>
