@@ -2,10 +2,17 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { TABS, type TabId } from "@/lib/portEcosystem";
 
 const EASE = [0.22, 1, 0.36, 1] as const;
 
-export default function Hero() {
+export default function Hero({
+  active,
+  onChange,
+}: {
+  active: TabId;
+  onChange: (id: TabId) => void;
+}) {
   return (
     <section
       id="top"
@@ -61,24 +68,57 @@ export default function Hero() {
           discerning few along the Atlantic&rsquo;s most exclusive coastline.
         </motion.p>
 
+        <motion.form
+          initial={{ opacity: 0, y: 18 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.28, ease: EASE }}
+          onSubmit={(e) => e.preventDefault()}
+          className="mt-10 flex max-w-xl items-center gap-2 rounded-full border border-white/20 bg-white/10 p-1.5 pl-5 backdrop-blur-md transition-colors duration-200 focus-within:border-white/40"
+        >
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth={2}
+            className="h-4 w-4 shrink-0 text-white/60"
+            aria-hidden
+          >
+            <circle cx="11" cy="11" r="7" />
+            <path d="m20 20-3.5-3.5" strokeLinecap="round" />
+          </svg>
+          <input
+            type="text"
+            placeholder="Search yachts, services, restaurants..."
+            className="w-full bg-transparent text-sm text-white placeholder:text-white/50 focus:outline-none"
+          />
+          <button
+            type="submit"
+            className="shrink-0 rounded-full bg-white px-5 py-2 text-[13px] font-semibold text-neutral-900 transition-transform duration-200 ease-out hover:scale-[1.02] active:scale-[0.97]"
+          >
+            Search
+          </button>
+        </motion.form>
+
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.32, ease: EASE }}
-          className="mt-12 flex flex-wrap items-center gap-4"
+          className="mt-6 flex flex-wrap gap-2"
         >
-          <a
-            href="#fleet"
-            className="inline-flex items-center rounded-full bg-white px-7 py-3.5 text-[14px] font-semibold text-neutral-900 transition-transform duration-200 ease-out hover:scale-[1.02] active:scale-[0.97]"
-          >
-            Explore the Fleet
-          </a>
-          <a
-            href="#contact"
-            className="inline-flex items-center rounded-full border border-white/30 px-7 py-3.5 text-[14px] font-medium text-white backdrop-blur-sm transition-colors duration-200 hover:border-white/60 active:scale-[0.97]"
-          >
-            Private Viewings
-          </a>
+          {TABS.map((tab) => (
+            <a
+              key={tab.id}
+              href="#fleet"
+              onClick={() => onChange(tab.id)}
+              className={`inline-flex items-center whitespace-nowrap rounded-full px-4 py-2 text-[13px] font-medium transition-colors duration-200 active:scale-[0.97] ${
+                active === tab.id
+                  ? "bg-white text-neutral-900"
+                  : "border border-white/25 text-white/80 backdrop-blur-sm hover:border-white/50 hover:text-white"
+              }`}
+            >
+              {tab.label}
+            </a>
+          ))}
         </motion.div>
       </div>
     </section>

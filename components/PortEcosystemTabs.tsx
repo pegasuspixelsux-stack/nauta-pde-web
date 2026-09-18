@@ -3,31 +3,9 @@
 import { useState } from "react";
 import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
+import type { TabId } from "@/lib/portEcosystem";
 
 const EASE = [0.22, 1, 0.36, 1] as const;
-
-type TabId =
-  | "classifieds"
-  | "services"
-  | "storage"
-  | "gastronomy"
-  | "supplies"
-  | "groceries"
-  | "lodging"
-  | "car-rental"
-  | "crew";
-
-const TABS: { id: TabId; label: string }[] = [
-  { id: "classifieds", label: "Classifieds" },
-  { id: "services", label: "Services" },
-  { id: "storage", label: "Storage" },
-  { id: "gastronomy", label: "Gastronomy" },
-  { id: "supplies", label: "Supplies" },
-  { id: "groceries", label: "Groceries" },
-  { id: "lodging", label: "Lodging" },
-  { id: "car-rental", label: "Car Rental" },
-  { id: "crew", label: "Captains & Crews" },
-];
 
 function WhatsAppIcon({ className }: { className?: string }) {
   return (
@@ -427,46 +405,66 @@ const CREW: CrewListing[] = [
   },
 ];
 
-export default function PortEcosystemTabs() {
-  const [active, setActive] = useState<TabId>("classifieds");
+const TAB_HEADINGS: Record<TabId, { eyebrow: string; heading: string }> = {
+  classifieds: {
+    eyebrow: "CLASSIFIEDS",
+    heading: "Curated vessels, currently in port.",
+  },
+  services: {
+    eyebrow: "SERVICES",
+    heading: "Trusted hands for every system on board.",
+  },
+  storage: {
+    eyebrow: "STORAGE",
+    heading: "Secure moorings and dry storage, year-round.",
+  },
+  gastronomy: {
+    eyebrow: "GASTRONOMY",
+    heading: "Waterfront dining, steps from the dock.",
+  },
+  supplies: {
+    eyebrow: "SUPPLIES",
+    heading: "Hardware, rigging, and everything in between.",
+  },
+  groceries: {
+    eyebrow: "GROCERIES",
+    heading: "Provisioning, delivered straight to your slip.",
+  },
+  lodging: {
+    eyebrow: "LODGING",
+    heading: "A place to stay, moments from the marina.",
+  },
+  "car-rental": {
+    eyebrow: "CAR RENTAL",
+    heading: "Arrive in style, wherever you're headed.",
+  },
+  crew: {
+    eyebrow: "CAPTAINS & CREWS",
+    heading: "Skilled hands, ready to come aboard.",
+  },
+};
 
+export default function PortEcosystemTabs({ active }: { active: TabId }) {
   return (
     <section id="fleet" className="border-t border-neutral-100 bg-white py-32 sm:py-40">
       <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12">
-        <div className="mb-14 max-w-2xl sm:mb-16">
-          <p className="mb-5 text-[13px] font-medium tracking-[0.2em] text-neutral-500">
-            THE PORT ECOSYSTEM
-          </p>
-          <h2 className="text-4xl font-semibold -tracking-tight text-neutral-900 sm:text-5xl">
-            Everything your vessel needs, in one harbor.
-          </h2>
-        </div>
-
-        <div className="sticky top-16 z-30 -mx-6 mb-14 border-b border-neutral-200 bg-white/90 px-6 py-4 backdrop-blur-md sm:mb-16 sm:overflow-x-auto sm:py-0 sm:-mx-8 sm:px-8 lg:-mx-12 lg:px-12">
-          <div className="flex flex-wrap gap-2 sm:min-w-max sm:flex-nowrap sm:gap-8">
-            {TABS.map((tab) => (
-              <button
-                key={tab.id}
-                type="button"
-                onClick={() => setActive(tab.id)}
-                className={`relative whitespace-nowrap rounded-full px-4 py-2 text-sm font-medium transition-colors duration-200 sm:rounded-none sm:px-0 sm:py-4 sm:text-[15px] ${
-                  active === tab.id
-                    ? "bg-neutral-900 text-white sm:bg-transparent sm:text-neutral-900"
-                    : "bg-neutral-100 text-neutral-600 hover:bg-neutral-200 sm:bg-transparent sm:text-neutral-400 sm:hover:bg-transparent sm:hover:text-neutral-600"
-                }`}
-              >
-                {tab.label}
-                {active === tab.id && (
-                  <motion.span
-                    layoutId="port-ecosystem-underline"
-                    className="absolute inset-x-0 -bottom-px hidden h-[2px] bg-neutral-900 sm:block"
-                    transition={{ duration: 0.35, ease: EASE }}
-                  />
-                )}
-              </button>
-            ))}
-          </div>
-        </div>
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={`${active}-heading`}
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -10 }}
+            transition={{ duration: 0.3, ease: EASE }}
+            className="mb-14 max-w-2xl sm:mb-16"
+          >
+            <p className="mb-5 text-[13px] font-medium tracking-[0.2em] text-neutral-500">
+              {TAB_HEADINGS[active].eyebrow}
+            </p>
+            <h2 className="text-4xl font-semibold -tracking-tight text-neutral-900 sm:text-5xl">
+              {TAB_HEADINGS[active].heading}
+            </h2>
+          </motion.div>
+        </AnimatePresence>
 
         <AnimatePresence mode="wait">
           <motion.div
