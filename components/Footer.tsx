@@ -2,23 +2,23 @@ import Logo from "./Logo";
 
 const COLUMNS = [
   {
-    title: "Navigate",
+    title: "Navegación",
     links: [
-      { label: "Fleet", href: "#fleet" },
-      { label: "Port Sanctuary", href: "#heritage" },
-      { label: "Heritage", href: "#heritage" },
+      { label: "Flota", href: "#fleet" },
+      { label: "Santuario del Puerto", href: "#heritage" },
+      { label: "Herencia", href: "#heritage" },
     ],
   },
   {
-    title: "Inquiries",
+    title: "Consultas",
     links: [
-      { label: "Private Viewings", href: "#contact" },
-      { label: "Consign a Vessel", href: "#contact" },
-      { label: "Concierge", href: "#contact" },
+      { label: "Visitas Privadas", href: "#contact" },
+      { label: "Consigná tu Embarcación", href: "#contact" },
+      { label: "Conserjería", href: "#contact" },
     ],
   },
   {
-    title: "Contact",
+    title: "Contacto",
     links: [
       { label: "Puerto de Punta del Este, Uruguay", href: "#contact" },
       { label: "+598 4244 0000", href: "tel:+59842440000" },
@@ -35,7 +35,7 @@ export default function Footer() {
           <div className="lg:col-span-1">
             <Logo />
             <p className="mt-4 max-w-[220px] text-sm leading-relaxed text-neutral-500">
-              A private yacht and sailing yacht dealership at the Port of
+              Una concesionaria privada de yates y veleros en el Puerto de
               Punta del Este.
             </p>
           </div>
@@ -63,20 +63,21 @@ export default function Footer() {
 
         <div className="mt-16 flex flex-col gap-4 border-t border-neutral-100 pt-8 sm:flex-row sm:items-center sm:justify-between">
           <p className="text-xs text-neutral-400">
-            &copy; {new Date().getFullYear()} Nauta PDE. All rights reserved.
+            &copy; {new Date().getFullYear()} Nauta PDE. Todos los derechos
+            reservados.
           </p>
           <div className="flex gap-6">
             <a
               href="#"
               className="text-xs text-neutral-400 transition-colors hover:text-neutral-700"
             >
-              Privacy
+              Privacidad
             </a>
             <a
               href="#"
               className="text-xs text-neutral-400 transition-colors hover:text-neutral-700"
             >
-              Terms
+              Términos
             </a>
           </div>
         </div>

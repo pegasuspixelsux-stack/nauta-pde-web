@@ -6,10 +6,10 @@ import Logo from "./Logo";
 import { TABS, type TabId } from "@/lib/portEcosystem";
 
 const LINKS = [
-  { label: "Fleet", href: "#fleet" },
-  { label: "Port Sanctuary", href: "#heritage" },
-  { label: "Heritage", href: "#heritage" },
-  { label: "Inquiries", href: "#contact" },
+  { label: "Flota", href: "#fleet" },
+  { label: "Santuario del Puerto", href: "#heritage" },
+  { label: "Herencia", href: "#heritage" },
+  { label: "Consultas", href: "#contact" },
 ];
 
 export default function Navbar({
@@ -60,7 +60,7 @@ export default function Navbar({
             href="#contact"
             className="inline-flex items-center rounded-full bg-neutral-900 px-5 py-2 text-[13px] font-medium text-white transition-transform duration-200 ease-out active:scale-[0.96]"
           >
-            Private Viewings
+            Visitas Privadas
           </a>
         </div>
 
@@ -68,7 +68,7 @@ export default function Navbar({
           type="button"
           onClick={() => setMenuOpen((v) => !v)}
           aria-expanded={menuOpen}
-          aria-label="Toggle navigation menu"
+          aria-label="Alternar menú de navegación"
           className={`flex h-9 w-9 items-center justify-center rounded-full transition-colors duration-300 md:hidden ${
             scrolled || menuOpen ? "text-neutral-900" : "text-white"
           }`}
@@ -117,14 +117,14 @@ export default function Navbar({
                   onClick={() => setMenuOpen(false)}
                   className="inline-flex items-center rounded-full bg-neutral-900 px-5 py-2 text-[13px] font-medium text-white"
                 >
-                  Private Viewings
+                  Visitas Privadas
                 </a>
               </li>
             </ul>
 
             <div className="border-t border-neutral-100 px-6 py-4">
               <p className="mb-3 text-[11px] font-medium tracking-[0.2em] text-neutral-400">
-                THE PORT ECOSYSTEM
+                EL ECOSISTEMA DEL PUERTO
               </p>
               <div className="flex flex-wrap gap-2">
                 {TABS.map((tab) => (

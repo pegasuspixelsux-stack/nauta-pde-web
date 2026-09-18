@@ -6,6 +6,96 @@ import { TABS, type TabId } from "@/lib/portEcosystem";
 
 const EASE = [0.22, 1, 0.36, 1] as const;
 
+function TabIcon({ id, className }: { id: TabId; className?: string }) {
+  const common = {
+    viewBox: "0 0 24 24",
+    fill: "none" as const,
+    stroke: "currentColor",
+    strokeWidth: 1.8,
+    strokeLinecap: "round" as const,
+    strokeLinejoin: "round" as const,
+    className,
+    "aria-hidden": true,
+  };
+
+  switch (id) {
+    case "classifieds":
+      return (
+        <svg {...common}>
+          <path d="M3 15h18l-2 5H5l-2-5Z" />
+          <path d="M6 15V6l6-3 6 3v9" />
+          <path d="M9 15V9h6v6" />
+        </svg>
+      );
+    case "services":
+      return (
+        <svg {...common}>
+          <path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.7 2.7-2-2z" />
+        </svg>
+      );
+    case "storage":
+      return (
+        <svg {...common}>
+          <path d="M3 9.5 12 4l9 5.5" />
+          <path d="M5 10v9h14v-9" />
+          <path d="M10 19v-6h4v6" />
+        </svg>
+      );
+    case "gastronomy":
+      return (
+        <svg {...common}>
+          <path d="M7 3v7a2 2 0 1 0 4 0V3" />
+          <path d="M9 10v11" />
+          <path d="M16 3c-1.2 0-2 1.5-2 4s.8 4 2 4v10" />
+        </svg>
+      );
+    case "supplies":
+      return (
+        <svg {...common}>
+          <path d="M20.5 11.5 12.5 3.5a1.5 1.5 0 0 0-2.1 0L3.5 10.4a1.5 1.5 0 0 0 0 2.1l8 8a1.5 1.5 0 0 0 2.1 0l6.9-6.9a1.5 1.5 0 0 0 0-2.1Z" />
+          <circle cx="9" cy="9" r="1.3" fill="currentColor" stroke="none" />
+        </svg>
+      );
+    case "groceries":
+      return (
+        <svg {...common}>
+          <path d="M6 8h15l-1.5 9h-12z" />
+          <path d="M6 8 4.5 4H2" />
+          <path d="M9.5 12.5v3" />
+          <path d="M14.5 12.5v3" />
+        </svg>
+      );
+    case "lodging":
+      return (
+        <svg {...common}>
+          <path d="M3 19v-8a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v8" />
+          <path d="M3 15h18" />
+          <path d="M7 12V9a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v3" />
+        </svg>
+      );
+    case "car-rental":
+      return (
+        <svg {...common}>
+          <path d="M4 16V11l2-5h12l2 5v5" />
+          <path d="M4 16h16" />
+          <circle cx="7.5" cy="16.5" r="1.5" fill="currentColor" stroke="none" />
+          <circle cx="16.5" cy="16.5" r="1.5" fill="currentColor" stroke="none" />
+        </svg>
+      );
+    case "crew":
+      return (
+        <svg {...common}>
+          <circle cx="9" cy="8" r="3" />
+          <path d="M3 20c0-3.3 2.7-5.5 6-5.5s6 2.2 6 5.5" />
+          <path d="M16 8.2a2.7 2.7 0 1 1 0 5.4" />
+          <path d="M17 14.6c2.4.4 4 2.2 4 5.4" />
+        </svg>
+      );
+    default:
+      return null;
+  }
+}
+
 export default function Hero({
   active,
   onChange,
@@ -20,7 +110,7 @@ export default function Hero({
     >
       <Image
         src="https://images.unsplash.com/photo-1642985867592-0d63c6c84609?auto=format&fit=crop&w=2400&q=80"
-        alt="Wide view of the water and city skyline at Punta del Este"
+        alt="Vista amplia del agua y el perfil de la ciudad de Punta del Este"
         fill
         priority
         sizes="100vw"
@@ -53,9 +143,9 @@ export default function Hero({
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.1, ease: EASE }}
-          className="max-w-4xl text-balance text-5xl font-semibold -tracking-tight text-white sm:text-6xl lg:text-7xl"
+          className="max-w-5xl text-balance text-4xl font-semibold -tracking-tight text-white sm:text-5xl lg:text-6xl"
         >
-          A private harbor for the world&rsquo;s finest yachts.
+          El gran epicentro náutico en el sur de América Latina.
         </motion.h1>
 
         <motion.p
@@ -64,8 +154,9 @@ export default function Hero({
           transition={{ duration: 0.8, delay: 0.2, ease: EASE }}
           className="mx-auto mt-8 max-w-xl text-lg leading-relaxed text-white/80 sm:text-xl"
         >
-          Curated motor yachts and bluewater sailing yachts, offered to a
-          discerning few along the Atlantic&rsquo;s most exclusive coastline.
+          Yates a motor y veleros de altura, curados, ofrecidos a unos
+          pocos exigentes a lo largo de la costa más exclusiva del
+          Atlántico.
         </motion.p>
 
         <motion.form
@@ -88,14 +179,14 @@ export default function Hero({
           </svg>
           <input
             type="text"
-            placeholder="Search yachts, services, restaurants..."
+            placeholder="Buscá yates, servicios, restaurantes..."
             className="w-full bg-transparent text-sm text-white placeholder:text-white/50 focus:outline-none"
           />
           <button
             type="submit"
             className="shrink-0 rounded-full bg-white px-5 py-2 text-[13px] font-semibold text-neutral-900 transition-transform duration-200 ease-out hover:scale-[1.02] active:scale-[0.97]"
           >
-            Search
+            Buscar
           </button>
         </motion.form>
 
@@ -110,12 +201,13 @@ export default function Hero({
               key={tab.id}
               href="#fleet"
               onClick={() => onChange(tab.id)}
-              className={`inline-flex items-center whitespace-nowrap rounded-full px-4 py-2 text-[13px] font-medium transition-colors duration-200 active:scale-[0.97] ${
+              className={`inline-flex items-center gap-1.5 whitespace-nowrap rounded-full px-4 py-2 text-[13px] font-medium transition-colors duration-200 active:scale-[0.97] ${
                 active === tab.id
                   ? "bg-white text-neutral-900"
                   : "border border-white/25 text-white/80 backdrop-blur-sm hover:border-white/50 hover:text-white"
               }`}
             >
+              <TabIcon id={tab.id} className="h-3.5 w-3.5 shrink-0" />
               {tab.label}
             </a>
           ))}

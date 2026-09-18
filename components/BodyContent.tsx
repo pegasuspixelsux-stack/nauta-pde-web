@@ -19,7 +19,7 @@ export default function BodyContent() {
           >
             <Image
               src="https://images.unsplash.com/photo-1741183575544-ae96e3c8c221?auto=format&fit=crop&w=1600&q=80"
-              alt="Luxury motor yachts moored side by side in a marina"
+              alt="Yates de motor de lujo amarrados uno al lado del otro en una marina"
               fill
               sizes="(min-width: 1024px) 40vw, 90vw"
               className="object-cover"
@@ -34,29 +34,29 @@ export default function BodyContent() {
             className="max-w-2xl lg:order-1"
           >
             <p className="mb-5 text-[13px] font-medium tracking-[0.2em] text-neutral-500">
-              HERITAGE
+              HERENCIA
             </p>
             <h2 className="text-4xl font-semibold -tracking-tight text-neutral-900 sm:text-5xl">
-              Where the Río de la Plata meets the Atlantic.
+              Donde el Río de la Plata se encuentra con el Atlántico.
             </h2>
             <div className="mt-8 space-y-6 text-lg leading-relaxed text-neutral-600">
               <p>
-                For nearly a century, Punta del Este has stood as the point
-                where two waters and two worlds converge — the calm, brown
-                current of the Río de la Plata giving way to the open blue
-                of the South Atlantic. It is a harbor built for arrivals,
-                and for vessels of consequence.
+                Desde hace casi un siglo, Punta del Este es el punto donde
+                convergen dos aguas y dos mundos: la corriente calma y
+                marrón del Río de la Plata dando paso al azul abierto del
+                Atlántico Sur. Es un puerto hecho para las llegadas, y para
+                embarcaciones de peso.
               </p>
               <p>
-                Nauta PDE was founded on a simple premise: that a yacht is
-                not merely purchased, but placed — into the right hands, the
-                right waters, and the right mooring. Every vessel in our
-                care is selected for its pedigree, inspected to a
-                transatlantic standard, and presented without pretense.
+                Nauta PDE se fundó sobre una premisa simple: un yate no se
+                compra, se ubica — en las manos correctas, las aguas
+                correctas y el amarre correcto. Cada embarcación a nuestro
+                cuidado se selecciona por su pedigrí, se inspecciona con un
+                estándar transatlántico y se presenta sin pretensiones.
               </p>
               <p>
-                What remains is a fleet as considered as the coastline it
-                calls home.
+                Lo que queda es una flota tan cuidada como la costa que
+                habita.
               </p>
             </div>
           </motion.div>

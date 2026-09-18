@@ -10,13 +10,13 @@ export type TabId =
   | "crew";
 
 export const TABS: { id: TabId; label: string }[] = [
-  { id: "classifieds", label: "Classifieds" },
-  { id: "services", label: "Services" },
-  { id: "storage", label: "Storage" },
-  { id: "gastronomy", label: "Gastronomy" },
-  { id: "supplies", label: "Supplies" },
-  { id: "groceries", label: "Groceries" },
-  { id: "lodging", label: "Lodging" },
-  { id: "car-rental", label: "Car Rental" },
-  { id: "crew", label: "Captains & Crews" },
+  { id: "classifieds", label: "Clasificados" },
+  { id: "services", label: "Servicios" },
+  { id: "storage", label: "Guardería" },
+  { id: "gastronomy", label: "Gastronomía" },
+  { id: "supplies", label: "Insumos" },
+  { id: "groceries", label: "Almacén" },
+  { id: "lodging", label: "Alojamiento" },
+  { id: "car-rental", label: "Alquiler de Autos" },
+  { id: "crew", label: "Capitanes y Tripulación" },
 ];

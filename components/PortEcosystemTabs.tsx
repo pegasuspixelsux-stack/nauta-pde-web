@@ -18,7 +18,7 @@ function WhatsAppIcon({ className }: { className?: string }) {
 
 type Vessel = {
   title: string;
-  type: "Dealer" | "Private Owner";
+  type: "Concesionario" | "Particular";
   vesselClass: string;
   length: string;
   year: string;
@@ -30,111 +30,111 @@ type Vessel = {
 const CLASSIFIEDS: Vessel[] = [
   {
     title: "Azimut 55 Fly",
-    type: "Dealer",
-    vesselClass: "Flybridge Yacht",
-    length: "16.8 m",
+    type: "Concesionario",
+    vesselClass: "Yate Flybridge",
+    length: "16,8 m",
     year: "2021",
     mooring: "Marina Punta del Este",
-    price: "$980,000",
+    price: "USD 980.000",
     image:
       "https://images.unsplash.com/photo-1551991619-d46f46154f94?auto=format&fit=crop&w=1200&q=80",
   },
   {
     title: "Beneteau Oceanis 46.1",
-    type: "Private Owner",
-    vesselClass: "Bluewater Sailing Yacht",
-    length: "14.6 m",
+    type: "Particular",
+    vesselClass: "Velero de Altura",
+    length: "14,6 m",
     year: "2019",
-    mooring: "La Barra Anchorage",
-    price: "$420,000",
+    mooring: "Fondeadero de La Barra",
+    price: "USD 420.000",
     image:
       "https://images.unsplash.com/photo-1534196143787-f563337ca933?auto=format&fit=crop&w=1200&q=80",
   },
   {
     title: "Jeanneau NC 37",
-    type: "Dealer",
-    vesselClass: "Motor Yacht",
-    length: "11.3 m",
+    type: "Concesionario",
+    vesselClass: "Yate a Motor",
+    length: "11,3 m",
     year: "2022",
     mooring: "Puerto de Punta del Este",
-    price: "$310,000",
+    price: "USD 310.000",
     image:
       "https://images.unsplash.com/photo-1574737685024-7b53d9828481?auto=format&fit=crop&w=1200&q=80",
   },
   {
     title: "Intermarine 55",
-    type: "Private Owner",
-    vesselClass: "Motor Yacht",
-    length: "16.7 m",
+    type: "Particular",
+    vesselClass: "Yate a Motor",
+    length: "16,7 m",
     year: "2018",
-    mooring: "Isla de Lobos Passage",
-    price: "$650,000",
+    mooring: "Paso de Isla de Lobos",
+    price: "USD 650.000",
     image:
       "https://images.unsplash.com/photo-1601183054392-d956c9315c27?auto=format&fit=crop&w=1200&q=80",
   },
   {
     title: "Sunseeker Predator 74",
-    type: "Dealer",
-    vesselClass: "Motor Yacht",
-    length: "22.6 m",
+    type: "Concesionario",
+    vesselClass: "Yate a Motor",
+    length: "22,6 m",
     year: "2023",
     mooring: "Muelle A, Punta del Este",
-    price: "$3,900,000",
+    price: "USD 3.900.000",
     image:
       "https://images.unsplash.com/photo-1551991619-d46f46154f94?auto=format&fit=crop&w=1200&q=80",
   },
   {
     title: "Azimut Grande 27M",
-    type: "Dealer",
-    vesselClass: "Flybridge Yacht",
-    length: "27.0 m",
+    type: "Concesionario",
+    vesselClass: "Yate Flybridge",
+    length: "27,0 m",
     year: "2022",
     mooring: "Marina Punta del Este",
-    price: "$6,200,000",
+    price: "USD 6.200.000",
     image:
       "https://images.unsplash.com/photo-1562281302-809108fd533c?auto=format&fit=crop&w=1200&q=80",
   },
   {
     title: "Pershing 8X",
-    type: "Private Owner",
-    vesselClass: "Sport Yacht",
-    length: "24.8 m",
+    type: "Particular",
+    vesselClass: "Yate Deportivo",
+    length: "24,8 m",
     year: "2024",
     mooring: "Puerto de Punta del Este",
-    price: "$5,400,000",
+    price: "USD 5.400.000",
     image:
       "https://images.unsplash.com/photo-1518528057367-d8618b763ca0?auto=format&fit=crop&w=1200&q=80",
   },
   {
     title: "Hallberg-Rassy 57",
-    type: "Private Owner",
-    vesselClass: "Bluewater Sailing Yacht",
-    length: "17.6 m",
+    type: "Particular",
+    vesselClass: "Velero de Altura",
+    length: "17,6 m",
     year: "2021",
-    mooring: "La Barra Anchorage",
-    price: "$1,800,000",
+    mooring: "Fondeadero de La Barra",
+    price: "USD 1.800.000",
     image:
       "https://images.unsplash.com/photo-1545148481-9b89ba700876?auto=format&fit=crop&w=1200&q=80",
   },
   {
     title: "Riva 100 Corsaro",
-    type: "Dealer",
-    vesselClass: "Motor Yacht",
-    length: "30.2 m",
+    type: "Concesionario",
+    vesselClass: "Yate a Motor",
+    length: "30,2 m",
     year: "2023",
     mooring: "Muelle C, Punta del Este",
-    price: "$11,500,000",
+    price: "USD 11.500.000",
     image:
       "https://images.unsplash.com/photo-1601183054392-d956c9315c27?auto=format&fit=crop&w=1200&q=80",
   },
   {
     title: "Oyster 745",
-    type: "Private Owner",
-    vesselClass: "Bluewater Sailing Yacht",
-    length: "22.7 m",
+    type: "Particular",
+    vesselClass: "Velero de Altura",
+    length: "22,7 m",
     year: "2022",
-    mooring: "Isla de Lobos Passage",
-    price: "$3,200,000",
+    mooring: "Paso de Isla de Lobos",
+    price: "USD 3.200.000",
     image:
       "https://images.unsplash.com/photo-1534196143787-f563337ca933?auto=format&fit=crop&w=1200&q=80",
   },
@@ -151,7 +151,7 @@ type ServiceProvider = {
 const SERVICES: ServiceProvider[] = [
   {
     name: "Punta del Este Marine Electronics",
-    specialty: "Navigation systems, radar & electronics installation",
+    specialty: "Sistemas de navegación, radar e instalación de electrónica",
     location: "Puerto de Punta del Este",
     whatsapp: "59899123456",
     image:
@@ -159,7 +159,7 @@ const SERVICES: ServiceProvider[] = [
   },
   {
     name: "Taller Gospodinoff",
-    specialty: "Diesel engine service & repower specialists",
+    specialty: "Especialistas en motores diésel y repotenciación",
     location: "Marina Punta del Este",
     whatsapp: "59899234567",
     image:
@@ -167,7 +167,7 @@ const SERVICES: ServiceProvider[] = [
   },
   {
     name: "Vela Sur Rigging & Sails",
-    specialty: "Standing rigging, sail repair & canvas work",
+    specialty: "Jarcia fija, reparación de velas y trabajos en lona",
     location: "La Barra",
     whatsapp: "59899345678",
     image:
@@ -175,7 +175,7 @@ const SERVICES: ServiceProvider[] = [
   },
   {
     name: "Hull Care PDE",
-    specialty: "Fiberglass, gelcoat & bottom paint restoration",
+    specialty: "Restauración de fibra de vidrio, gelcoat y pintura de casco",
     location: "Puerto de Punta del Este",
     whatsapp: "59899456789",
     image:
@@ -193,22 +193,22 @@ type StorageFacility = {
 const STORAGE: StorageFacility[] = [
   {
     name: "Puerto de Punta del Este Hardstand",
-    capacity: "Outdoor secure storage · max LOA 24 m",
-    amenities: "75-ton travel lift, water & power hookups",
+    capacity: "Guardería exterior segura · eslora máx. 24 m",
+    amenities: "Travel lift de 75 toneladas, conexión de agua y electricidad",
     image:
       "https://images.unsplash.com/photo-1530334269045-744542eef9a2?auto=format&fit=crop&w=1200&q=80",
   },
   {
     name: "Port Storage Yards",
-    capacity: "Indoor & outdoor · gated 24/7 security · max LOA 18 m",
-    amenities: "50-ton travel lift, wash-down bay",
+    capacity: "Interior y exterior · seguridad 24/7 con acceso controlado · eslora máx. 18 m",
+    amenities: "Travel lift de 50 toneladas, bahía de lavado",
     image:
       "https://images.unsplash.com/photo-1505802641929-aeef461d81eb?auto=format&fit=crop&w=1200&q=80",
   },
   {
     name: "La Barra Winter Storage",
-    capacity: "Seasonal dry storage · max LOA 15 m",
-    amenities: "Shrink-wrap service, power hookups",
+    capacity: "Guardería en seco de temporada · eslora máx. 15 m",
+    amenities: "Servicio de enzunchado, conexión eléctrica",
     image:
       "https://images.unsplash.com/photo-1694663198902-d4f4e3b98ec6?auto=format&fit=crop&w=1200&q=80",
   },
@@ -224,22 +224,22 @@ type Restaurant = {
 const GASTRONOMY: Restaurant[] = [
   {
     name: "Lo de Tere",
-    cuisine: "Uruguayan seafood, waterfront terrace",
-    highlight: "Dockside view · extensive wine cellar",
+    cuisine: "Mariscos uruguayos, terraza frente al mar",
+    highlight: "Vista al muelle · extensa carta de vinos",
     image:
       "https://images.unsplash.com/photo-1541014741259-de529411b96a?auto=format&fit=crop&w=1200&q=80",
   },
   {
     name: "Marisquería El Pobre Marinero",
-    cuisine: "Traditional seafood, casual harborside",
-    highlight: "Fresh catch of the day · reservations recommended",
+    cuisine: "Mariscos tradicionales, ambiente informal junto al puerto",
+    highlight: "Pesca fresca del día · se recomienda reservar",
     image:
       "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1200&q=80",
   },
   {
     name: "Popei's",
-    cuisine: "International fine dining, sunset views",
-    highlight: "Rooftop terrace over the marina",
+    cuisine: "Alta cocina internacional, vistas al atardecer",
+    highlight: "Terraza en la azotea sobre la marina",
     image:
       "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=80",
   },
@@ -254,18 +254,18 @@ type Supplier = {
 const SUPPLIES: Supplier[] = [
   {
     name: "Portside Chandlery",
-    service: "Marine hardware, safety gear & fuel bunkering",
-    delivery: "Direct-to-slip delivery within 2 hours",
+    service: "Herrajes náuticos, equipo de seguridad y venta de combustible",
+    delivery: "Entrega directa al amarre en 2 horas",
   },
   {
     name: "Fibra Sur Composites",
-    service: "Fiberglass, resin, gelcoat & antifouling paint",
-    delivery: "Pickup or delivery to Puerto de Punta del Este",
+    service: "Fibra de vidrio, resina, gelcoat y pintura antiincrustante",
+    delivery: "Retiro en local o entrega en Puerto de Punta del Este",
   },
   {
     name: "Cabo Rope & Rigging Supply",
-    service: "Line, rope, shackles & rigging hardware",
-    delivery: "Same-day pickup, dockside delivery on request",
+    service: "Cabos, sogas, grilletes y herrajes de jarcia",
+    delivery: "Retiro el mismo día, entrega a muelle a pedido",
   },
 ];
 
@@ -278,18 +278,18 @@ type GroceryProvider = {
 const GROCERIES: GroceryProvider[] = [
   {
     name: "Supermarket Delivery PDE",
-    service: "Fresh provisions & gourmet groceries",
-    delivery: "Same-day delivery, minimum order $50",
+    service: "Provisiones frescas y almacén gourmet",
+    delivery: "Entrega el mismo día, pedido mínimo USD 50",
   },
   {
     name: "Blue Water Catering",
-    service: "Gourmet provisioning & private chef service",
-    delivery: "24-hour advance booking required",
+    service: "Aprovisionamiento gourmet y servicio de chef privado",
+    delivery: "Requiere reserva con 24 horas de anticipación",
   },
   {
     name: "Puerto Fresh Market",
-    service: "Fresh produce, seafood & local specialties",
-    delivery: "Direct-to-slip delivery, order by 10am",
+    service: "Productos frescos, pescado y mariscos, y especialidades locales",
+    delivery: "Entrega directa al amarre, pedidos antes de las 10:00",
   },
 ];
 
@@ -303,22 +303,22 @@ type Lodging = {
 const LODGING: Lodging[] = [
   {
     name: "Ocean Club Suites",
-    type: "Boutique hotel, 5 minutes from the port",
-    highlight: "Rooftop pool & panoramic ocean views",
+    type: "Hotel boutique, a 5 minutos del puerto",
+    highlight: "Pileta en la azotea y vistas panorámicas al mar",
     image:
       "https://images.unsplash.com/photo-1671798747357-aa4364af0b72?auto=format&fit=crop&w=1200&q=80",
   },
   {
     name: "La Barra Boutique Hotel",
-    type: "Serviced apartments, waterfront",
-    highlight: "Private terraces overlooking La Barra",
+    type: "Apartamentos con servicio, frente al mar",
+    highlight: "Terrazas privadas con vista a La Barra",
     image:
       "https://images.unsplash.com/photo-1719465263924-eff2bd34fa6c?auto=format&fit=crop&w=1200&q=80",
   },
   {
     name: "Port House Residences",
-    type: "Short-stay residences, dockside",
-    highlight: "Walking distance to Puerto de Punta del Este",
+    type: "Residencias de estadía corta, junto al muelle",
+    highlight: "A pasos del Puerto de Punta del Este",
     image:
       "https://images.unsplash.com/photo-1501117716987-c8c394bb29df?auto=format&fit=crop&w=1200&q=80",
   },
@@ -335,24 +335,24 @@ type CarRental = {
 const CAR_RENTAL: CarRental[] = [
   {
     name: "PDE Prestige Rentals",
-    fleet: "Luxury SUVs & sedans",
-    delivery: "Dockside delivery on arrival",
+    fleet: "SUVs y sedanes de lujo",
+    delivery: "Entrega al muelle al llegar",
     whatsapp: "59899567890",
     image:
       "https://images.unsplash.com/photo-1747944682596-a16f1e304d4f?auto=format&fit=crop&w=1200&q=80",
   },
   {
     name: "Puerto Motors Rent-a-Car",
-    fleet: "Convertibles & sport coupes",
-    delivery: "Pickup at the marina, same-day booking",
+    fleet: "Convertibles y cupés deportivos",
+    delivery: "Retiro en la marina, reserva el mismo día",
     whatsapp: "59899678901",
     image:
       "https://images.unsplash.com/photo-1748514338092-943ecca0cdc9?auto=format&fit=crop&w=1200&q=80",
   },
   {
     name: "Fleet Drive Punta del Este",
-    fleet: "Chauffeured & self-drive options",
-    delivery: "Delivered anywhere between the port and La Barra",
+    fleet: "Con chofer o autoconducido",
+    delivery: "Entrega en cualquier punto entre el puerto y La Barra",
     whatsapp: "59899789012",
     image:
       "https://images.unsplash.com/photo-1562596127-3885a12dcdb6?auto=format&fit=crop&w=1200&q=80",
@@ -361,86 +361,86 @@ const CAR_RENTAL: CarRental[] = [
 
 type CrewListing = {
   role: string;
-  kind: "Wanted" | "Offered";
+  kind: "Busca" | "Ofrece";
   details: string;
   whatsapp: string;
 };
 
 const CREW: CrewListing[] = [
   {
-    role: "Live-Aboard Captain",
-    kind: "Wanted",
-    details: "50m+ motor yacht seeks licensed captain for the summer season. MCA/RYA preferred.",
+    role: "Capitán Residente",
+    kind: "Busca",
+    details: "Yate a motor de 50m+ busca capitán con licencia para la temporada de verano. Se prefiere MCA/RYA.",
     whatsapp: "59899111222",
   },
   {
-    role: "Deckhand / First Mate",
-    kind: "Wanted",
-    details: "Sailing yacht seeking an experienced deckhand for weekend charters.",
+    role: "Marinero / Primer Oficial",
+    kind: "Busca",
+    details: "Velero busca marinero con experiencia para charters de fin de semana.",
     whatsapp: "59899222333",
   },
   {
-    role: "Engineer",
-    kind: "Wanted",
-    details: "Motor yacht seeks part-time engineer for maintenance during winter storage.",
+    role: "Maquinista",
+    kind: "Busca",
+    details: "Yate a motor busca maquinista part-time para mantenimiento durante la guardería de invierno.",
     whatsapp: "59899333444",
   },
   {
-    role: "Stewardess",
-    kind: "Offered",
-    details: "5 years of superyacht experience. Available immediately, references on request.",
+    role: "Camarera de a Bordo",
+    kind: "Ofrece",
+    details: "5 años de experiencia en superyates. Disponibilidad inmediata, referencias a pedido.",
     whatsapp: "59899444555",
   },
   {
-    role: "Delivery Skipper",
-    kind: "Offered",
-    details: "RYA Yachtmaster Ocean. Available for Atlantic crossings and coastal deliveries.",
+    role: "Patrón de Entrega",
+    kind: "Ofrece",
+    details: "RYA Yachtmaster Ocean. Disponible para travesías del Atlántico y entregas costeras.",
     whatsapp: "59899555666",
   },
   {
-    role: "Day Charter Crew (Captain + Deckhand)",
-    kind: "Offered",
-    details: "Two-person team available for day charters at Punta del Este.",
+    role: "Tripulación para Charter Diario (Capitán + Marinero)",
+    kind: "Ofrece",
+    details: "Equipo de dos personas disponible para charters diarios en Punta del Este.",
     whatsapp: "59899666777",
   },
 ];
 
 const TAB_HEADINGS: Record<TabId, { eyebrow: string; heading: string }> = {
   classifieds: {
-    eyebrow: "CLASSIFIEDS",
-    heading: "Curated vessels, listed worldwide.",
+    eyebrow: "CLASIFICADOS",
+    heading: "Embarcaciones curadas, publicadas en todo el mundo.",
   },
   services: {
-    eyebrow: "SERVICES",
-    heading: "Trusted hands for every system on board.",
+    eyebrow: "SERVICIOS",
+    heading: "Manos de confianza para cada sistema a bordo.",
   },
   storage: {
-    eyebrow: "STORAGE",
-    heading: "Secure moorings and dry storage, year-round.",
+    eyebrow: "GUARDERÍA",
+    heading: "Amarres seguros y guardería en seco, todo el año.",
   },
   gastronomy: {
-    eyebrow: "GASTRONOMY",
-    heading: "Waterfront dining, steps from the dock.",
+    eyebrow: "GASTRONOMÍA",
+    heading: "Gastronomía frente al mar, a pasos del muelle.",
   },
   supplies: {
-    eyebrow: "SUPPLIES",
-    heading: "Hardware, rigging, and everything in between.",
+    eyebrow: "INSUMOS",
+    heading: "Herrajes, jarcia y todo lo necesario a bordo.",
   },
   groceries: {
-    eyebrow: "GROCERIES",
-    heading: "Provisioning, delivered straight to your slip.",
+    eyebrow: "ALMACÉN",
+    heading: "Provisiones, entregadas directo a tu amarre.",
   },
   lodging: {
-    eyebrow: "LODGING",
-    heading: "A place to stay, moments from the marina.",
+    eyebrow: "ALOJAMIENTO",
+    heading: "Un lugar donde quedarte, a minutos de la marina.",
   },
   "car-rental": {
-    eyebrow: "CAR RENTAL",
-    heading: "Arrive in style, wherever you're headed.",
+    eyebrow: "ALQUILER DE AUTOS",
+    heading: "Llegá con estilo, a donde sea que vayas.",
   },
   crew: {
-    eyebrow: "CAPTAINS & CREWS",
-    heading: "Skilled hands, ready to come aboard.",
+    eyebrow: "CAPITANES Y TRIPULACIÓN",
+    heading: "Manos expertas, listas para subir a bordo.",
   },
 };
 
@@ -499,49 +499,49 @@ type FeaturedDealer = {
 const FEATURED_DEALERS: FeaturedDealer[] = [
   {
     brand: "Azimut",
-    tagline: "Authorized Dealer",
+    tagline: "Concesionario Autorizado",
     image:
       "https://images.unsplash.com/photo-1562281302-809108fd533c?auto=format&fit=crop&w=800&q=80",
   },
   {
     brand: "Sunseeker",
-    tagline: "Authorized Dealer",
+    tagline: "Concesionario Autorizado",
     image:
       "https://images.unsplash.com/photo-1551991619-d46f46154f94?auto=format&fit=crop&w=800&q=80",
   },
   {
     brand: "Pershing",
-    tagline: "Authorized Dealer",
+    tagline: "Concesionario Autorizado",
     image:
       "https://images.unsplash.com/photo-1518528057367-d8618b763ca0?auto=format&fit=crop&w=800&q=80",
   },
   {
     brand: "Riva",
-    tagline: "Authorized Dealer",
+    tagline: "Concesionario Autorizado",
     image:
       "https://images.unsplash.com/photo-1601183054392-d956c9315c27?auto=format&fit=crop&w=800&q=80",
   },
   {
     brand: "Beneteau",
-    tagline: "Authorized Dealer",
+    tagline: "Concesionario Autorizado",
     image:
       "https://images.unsplash.com/photo-1534196143787-f563337ca933?auto=format&fit=crop&w=800&q=80",
   },
   {
     brand: "Jeanneau",
-    tagline: "Authorized Dealer",
+    tagline: "Concesionario Autorizado",
     image:
       "https://images.unsplash.com/photo-1574737685024-7b53d9828481?auto=format&fit=crop&w=800&q=80",
   },
   {
     brand: "Hallberg-Rassy",
-    tagline: "Authorized Dealer",
+    tagline: "Concesionario Autorizado",
     image:
       "https://images.unsplash.com/photo-1545148481-9b89ba700876?auto=format&fit=crop&w=800&q=80",
   },
   {
     brand: "Oyster Yachts",
-    tagline: "Authorized Dealer",
+    tagline: "Concesionario Autorizado",
     image:
       "https://images.unsplash.com/photo-1741183575544-ae96e3c8c221?auto=format&fit=crop&w=800&q=80",
   },
@@ -551,7 +551,7 @@ function DealerScroller() {
   return (
     <div className="mb-12">
       <p className="mb-4 text-[13px] font-medium tracking-[0.2em] text-neutral-500">
-        FEATURED DEALERS &amp; BRANDS
+        MARCAS Y CONCESIONARIOS DESTACADOS
       </p>
       <div className="-mx-6 flex snap-x snap-mandatory gap-4 overflow-x-auto px-6 pb-2 sm:-mx-8 sm:px-8 lg:-mx-12 lg:px-12">
         {FEATURED_DEALERS.map((dealer) => (
@@ -562,7 +562,7 @@ function DealerScroller() {
             <div className="relative aspect-[4/3]">
               <Image
                 src={dealer.image}
-                alt={`${dealer.brand}, an authorized yacht dealer at Punta del Este`}
+                alt={`${dealer.brand}, concesionario autorizado de yates en Punta del Este`}
                 fill
                 sizes="192px"
                 className="object-cover transition-transform duration-500 ease-out group-hover:scale-105"
@@ -584,19 +584,178 @@ function DealerScroller() {
   );
 }
 
+type LocalBusiness = {
+  name: string;
+  rating?: number;
+  category: string;
+  status?: string;
+  description: string;
+  brands?: string[];
+};
+
+const LOCAL_BUSINESSES: LocalBusiness[] = [
+  {
+    name: "El Muelle",
+    rating: 4.7,
+    category: "Oficina Corporativa",
+    status: "Cerrado · Abre 9:00 lun",
+    description:
+      "Sobre la Ruta Interbalnearia Km 119, en Punta Ballena. Funciona como boutique náutica, guardería y concesionario de embarcaciones.",
+    brands: [
+      "Regal Boats",
+      "Dufour Yachts",
+      "Bavaria Yachts",
+      "Fountaine Pajot",
+      "Sealegs",
+    ],
+  },
+  {
+    name: "Nordica Sur",
+    category: "Concesionario",
+    description: "Opera regionalmente en Punta del Este.",
+    brands: ["Saxdor Yachts"],
+  },
+  {
+    name: "Náutica de Punta",
+    category: "Concesionario",
+    description: "Ubicado en la zona de Maldonado y Punta del Este.",
+    brands: ["Yamaha Marine", "Saxdor"],
+  },
+  {
+    name: "Mar Adentro Barcos",
+    rating: 5.0,
+    category: "Proveedores",
+    status: "Cerrado · Abre 10:00 sáb",
+    description:
+      "Sobre la Rambla General Artigas. Se especializa en venta de embarcaciones y equipamiento náutico. Horario estándar de lunes a viernes, reducido los sábados.",
+  },
+  {
+    name: "Aeromarine S.A.",
+    rating: 4.1,
+    category: "Tienda",
+    status: "Cerrado · Abre 10:00 sáb",
+    description:
+      "En la Calle 17, atiende las necesidades náuticas locales. Cuenta con tienda online de accesorios y equipamiento marino. Abierto en tardes seleccionadas y fines de semana.",
+  },
+  {
+    name: "CENTRO NAUTICO",
+    rating: 1.0,
+    category: "Proveedores",
+    status: "Cerrado · Abre 10:00 sáb",
+    description:
+      "Insumos náuticos y servicios de concesionaria cerca de la Avenida Río Branco. Abierto de lunes a sábado en horario matutino.",
+  },
+  {
+    name: "Nautik&Road",
+    rating: 4.7,
+    category: "Tienda",
+    status: "Cerrado · Abre 10:00 sáb",
+    description:
+      "Sobre la Ruta Interbalnearia. Combina oferta náutica con servicios para vehículos y trailers. Horario partido por la tarde en días de semana.",
+  },
+  {
+    name: "Altamar punta",
+    category: "Proveedores",
+    status: "Abierto",
+    description:
+      "Atiende a los amantes de la náutica en la región de Maldonado y Punta del Este, con disponibilidad continua las 24 horas.",
+  },
+  {
+    name: "Alquiler de Barcos y Yates",
+    rating: 4.2,
+    category: "Servicios",
+    status: "Abierto",
+    description:
+      "Sobre la Calle Virazón, cerca del puerto. Alquiler marítimo y servicios de embarcaciones, abierto las 24 horas.",
+  },
+  {
+    name: "Alquiler de yates en Punta del Este",
+    rating: 3.9,
+    category: "Servicios",
+    status: "Abierto · Cierra 20:00",
+    description:
+      "Opera desde el Muelle Principal del puerto. Servicios de yates y operación de embarcaciones, con horario extendido hasta la noche.",
+  },
+  {
+    name: "Alquiler de barcos Popey",
+    rating: 5.0,
+    category: "Servicios",
+    status: "Cerrado · Abre 9:00 sáb",
+    description:
+      "Presencia consolidada dentro del puerto de Punta del Este. Muy bien calificado por sus servicios de alquiler y charter de embarcaciones.",
+  },
+  {
+    name: "Servicios Náuticos",
+    rating: 3.0,
+    category: "Servicios",
+    status: "Cerrado · Abre 10:00 lun",
+    description:
+      "Sobre la Rambla General Artigas. Soporte técnico y náutico especializado para propietarios locales, de lunes a viernes.",
+  },
+  {
+    name: "Yacht Club",
+    rating: 4.6,
+    category: "Marina",
+    status: "Abierto · Cierra 0:50 sáb",
+    description:
+      "Yacht Club Uruguayo / sede de la marina de Punta del Este. Pilar institucional de la comunidad náutica, en el corazón de la infraestructura portuaria.",
+  },
+];
+
+function MoreDealersSection() {
+  return (
+    <div className="mb-16">
+      <p className="mb-6 text-[13px] font-medium tracking-[0.2em] text-neutral-500">
+        MÁS CONCESIONARIOS Y PROVEEDORES NÁUTICOS
+      </p>
+      <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        {LOCAL_BUSINESSES.map((biz) => (
+          <div
+            key={biz.name}
+            className="rounded-xl border border-neutral-100 bg-neutral-50 p-6"
+          >
+            <div className="flex items-start justify-between gap-3">
+              <h3 className="text-base font-semibold tracking-tight text-neutral-900">
+                {biz.name}
+              </h3>
+              {biz.rating && (
+                <span className="shrink-0 whitespace-nowrap text-sm font-medium text-neutral-700">
+                  ★ {biz.rating.toFixed(1)}
+                </span>
+              )}
+            </div>
+            <p className="mt-1 text-xs font-medium tracking-wide text-neutral-500">
+              {biz.category}
+              {biz.status ? ` · ${biz.status}` : ""}
+            </p>
+            <p className="mt-3 text-sm leading-relaxed text-neutral-600">
+              {biz.description}
+            </p>
+            {biz.brands && (
+              <p className="mt-3 text-xs font-medium text-neutral-500">
+                Marcas: {biz.brands.join(", ")}
+              </p>
+            )}
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
 const PRICE_CEILINGS = [
-  { label: "Any price", value: Infinity },
-  { label: "Under $500K", value: 500_000 },
-  { label: "Under $1M", value: 1_000_000 },
-  { label: "Under $5M", value: 5_000_000 },
+  { label: "Cualquier precio", value: Infinity },
+  { label: "Hasta USD 500 mil", value: 500_000 },
+  { label: "Hasta USD 1 millón", value: 1_000_000 },
+  { label: "Hasta USD 5 millones", value: 5_000_000 },
 ];
 
 function parsePrice(price: string) {
-  return Number(price.replace(/[^0-9.]/g, ""));
+  return Number(price.replace(/[^0-9]/g, ""));
 }
 
 function ClassifiedsPanel() {
-  const [listingType, setListingType] = useState<"All" | "Dealer" | "Private Owner">("All");
+  const [listingType, setListingType] = useState<"Todos" | "Concesionario" | "Particular">("Todos");
   const [maxPrice, setMaxPrice] = useState(Infinity);
   const [selectedClasses, setSelectedClasses] = useState<Set<string>>(new Set());
   const [selectedMoorings, setSelectedMoorings] = useState<Set<string>>(new Set());
@@ -615,7 +774,7 @@ function ClassifiedsPanel() {
   };
 
   const filtered = CLASSIFIEDS.filter((vessel) => {
-    if (listingType !== "All" && vessel.type !== listingType) return false;
+    if (listingType !== "Todos" && vessel.type !== listingType) return false;
     if (parsePrice(vessel.price) > maxPrice) return false;
     if (selectedClasses.size > 0 && !selectedClasses.has(vessel.vesselClass))
       return false;
@@ -625,7 +784,7 @@ function ClassifiedsPanel() {
   });
 
   const resetFilters = () => {
-    setListingType("All");
+    setListingType("Todos");
     setMaxPrice(Infinity);
     setSelectedClasses(new Set());
     setSelectedMoorings(new Set());
@@ -634,28 +793,29 @@ function ClassifiedsPanel() {
   return (
     <div>
       <DealerScroller />
+      <MoreDealersSection />
 
       <div className="grid grid-cols-1 gap-10 lg:grid-cols-[240px_1fr] lg:gap-12">
         <aside className="flex flex-col gap-8 lg:sticky lg:top-40 lg:self-start">
           <div className="flex items-center justify-between">
             <p className="text-[13px] font-medium tracking-[0.2em] text-neutral-500">
-              FILTERS
+              FILTROS
             </p>
             <button
               type="button"
               onClick={resetFilters}
               className="text-[13px] font-medium text-neutral-400 transition-colors hover:text-neutral-900"
             >
-              Reset
+              Reiniciar
             </button>
           </div>
 
           <div>
             <p className="mb-3 text-sm font-semibold text-neutral-900">
-              Listing Type
+              Tipo de Publicación
             </p>
             <div className="flex flex-col gap-2">
-              {(["All", "Dealer", "Private Owner"] as const).map((option) => (
+              {(["Todos", "Concesionario", "Particular"] as const).map((option) => (
                 <button
                   key={option}
                   type="button"
@@ -674,7 +834,7 @@ function ClassifiedsPanel() {
 
           <div>
             <p className="mb-3 text-sm font-semibold text-neutral-900">
-              Vessel Class
+              Clase de Embarcación
             </p>
             <div className="flex flex-col gap-2">
               {uniqueClasses.map((cls) => (
@@ -698,7 +858,7 @@ function ClassifiedsPanel() {
 
           <div>
             <p className="mb-3 text-sm font-semibold text-neutral-900">
-              Max Price
+              Precio Máximo
             </p>
             <div className="flex flex-col gap-2">
               {PRICE_CEILINGS.map((ceiling) => (
@@ -721,7 +881,7 @@ function ClassifiedsPanel() {
 
           <div>
             <p className="mb-3 text-sm font-semibold text-neutral-900">
-              Mooring
+              Amarre
             </p>
             <div className="flex flex-col gap-2">
               {uniqueMoorings.map((mooring) => (
@@ -747,7 +907,7 @@ function ClassifiedsPanel() {
         <div>
           {filtered.length === 0 ? (
             <p className="py-16 text-center text-sm text-neutral-500">
-              No vessels match these filters.
+              Ningún barco coincide con estos filtros.
             </p>
           ) : (
             <div className="grid grid-cols-1 gap-x-8 gap-y-14 sm:grid-cols-2 xl:grid-cols-3">
@@ -756,7 +916,7 @@ function ClassifiedsPanel() {
                   <div className="relative aspect-[4/3] overflow-hidden rounded-xl border border-neutral-100 bg-neutral-100">
                     <Image
                       src={vessel.image}
-                      alt={`${vessel.title}, listed by ${vessel.type === "Dealer" ? "a dealer" : "a private owner"} at Punta del Este`}
+                      alt={`${vessel.title}, publicado por ${vessel.type === "Concesionario" ? "un concesionario" : "un particular"} en Punta del Este`}
                       fill
                       sizes="(min-width: 1280px) 33vw, (min-width: 640px) 50vw, 100vw"
                       className="object-cover transition-transform duration-500 ease-out group-hover:scale-105"
@@ -777,19 +937,19 @@ function ClassifiedsPanel() {
 
                   <dl className="mt-3 flex flex-wrap gap-x-5 gap-y-1 text-sm text-neutral-500">
                     <div className="flex gap-1.5">
-                      <dt>LOA</dt>
+                      <dt>Eslora</dt>
                       <dd className="font-medium text-neutral-800">
                         {vessel.length}
                       </dd>
                     </div>
                     <div className="flex gap-1.5">
-                      <dt>Year</dt>
+                      <dt>Año</dt>
                       <dd className="font-medium text-neutral-800">
                         {vessel.year}
                       </dd>
                     </div>
                     <div className="flex gap-1.5">
-                      <dt>Mooring</dt>
+                      <dt>Amarre</dt>
                       <dd className="font-medium text-neutral-800">
                         {vessel.mooring}
                       </dd>
@@ -798,11 +958,11 @@ function ClassifiedsPanel() {
 
                   <a
                     href={`mailto:inquiries@nautapde.com?subject=${encodeURIComponent(
-                      `Inquiry: ${vessel.title}`
+                      `Consulta: ${vessel.title}`
                     )}`}
                     className="mt-5 inline-flex items-center rounded-full border border-neutral-200 px-5 py-2 text-[13px] font-medium text-neutral-800 transition-colors duration-200 hover:border-neutral-900 hover:text-neutral-900 active:scale-[0.97]"
                   >
-                    Quick Inquiry
+                    Consulta Rápida
                   </a>
                 </article>
               ))}
@@ -822,7 +982,7 @@ function ServicesPanel() {
           <div className="relative aspect-square w-28 shrink-0 overflow-hidden rounded-xl border border-neutral-100 bg-neutral-100 sm:w-36">
             <Image
               src={provider.image}
-              alt={`${provider.name}, a marine service provider at Punta del Este`}
+              alt={`${provider.name}, proveedor de servicios náuticos en Punta del Este`}
               fill
               sizes="144px"
               className="object-cover transition-transform duration-500 ease-out group-hover:scale-105"
@@ -862,7 +1022,7 @@ function StoragePanel() {
           <div className="relative aspect-[4/3] overflow-hidden rounded-xl border border-neutral-100 bg-neutral-100">
             <Image
               src={facility.image}
-              alt={`${facility.name}, a boat storage facility at Punta del Este`}
+              alt={`${facility.name}, guardería de embarcaciones en Punta del Este`}
               fill
               sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
               className="object-cover transition-transform duration-500 ease-out group-hover:scale-105"
@@ -891,7 +1051,7 @@ function GastronomyPanel() {
           <div className="relative aspect-[4/5] overflow-hidden rounded-xl border border-neutral-100 bg-neutral-100">
             <Image
               src={restaurant.image}
-              alt={`${restaurant.name}, a restaurant at the Port of Punta del Este`}
+              alt={`${restaurant.name}, restaurante en el Puerto de Punta del Este`}
               fill
               sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
               className="object-cover transition-transform duration-500 ease-out group-hover:scale-105"
@@ -964,7 +1124,7 @@ function LodgingPanel() {
           <div className="relative aspect-[4/5] overflow-hidden rounded-xl border border-neutral-100 bg-neutral-100">
             <Image
               src={stay.image}
-              alt={`${stay.name}, lodging near the Port of Punta del Este`}
+              alt={`${stay.name}, alojamiento cerca del Puerto de Punta del Este`}
               fill
               sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
               className="object-cover transition-transform duration-500 ease-out group-hover:scale-105"
@@ -991,7 +1151,7 @@ function CarRentalPanel() {
           <div className="relative aspect-[4/3] overflow-hidden rounded-xl border border-neutral-100 bg-neutral-100">
             <Image
               src={provider.image}
-              alt={`${provider.name}, a car rental provider serving Punta del Este`}
+              alt={`${provider.name}, empresa de alquiler de autos en Punta del Este`}
               fill
               sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
               className="object-cover transition-transform duration-500 ease-out group-hover:scale-105"
@@ -1020,14 +1180,14 @@ function CarRentalPanel() {
 }
 
 function CrewPanel() {
-  const wanted = CREW.filter((c) => c.kind === "Wanted");
-  const offered = CREW.filter((c) => c.kind === "Offered");
+  const wanted = CREW.filter((c) => c.kind === "Busca");
+  const offered = CREW.filter((c) => c.kind === "Ofrece");
 
   return (
     <div className="grid grid-cols-1 gap-x-8 gap-y-12 lg:grid-cols-2">
       <div>
         <h3 className="mb-6 text-[13px] font-medium tracking-[0.2em] text-neutral-500">
-          HELP WANTED
+          SE BUSCA
         </h3>
         <div className="flex flex-col gap-5">
           {wanted.map((listing) => (
@@ -1038,7 +1198,7 @@ function CrewPanel() {
 
       <div>
         <h3 className="mb-6 text-[13px] font-medium tracking-[0.2em] text-neutral-500">
-          HELP OFFERED
+          SE OFRECE
         </h3>
         <div className="flex flex-col gap-5">
           {offered.map((listing) => (
@@ -1059,7 +1219,7 @@ function CrewCard({ listing }: { listing: CrewListing }) {
         </h4>
         <span
           className={`shrink-0 rounded-full px-3 py-1 text-[11px] font-medium tracking-wide ${
-            listing.kind === "Wanted"
+            listing.kind === "Busca"
               ? "bg-neutral-900 text-white"
               : "border border-neutral-300 text-neutral-700"
           }`}
