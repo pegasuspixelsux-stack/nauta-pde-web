@@ -12,8 +12,8 @@ export default function Hero() {
       className="relative flex min-h-screen items-end overflow-hidden bg-neutral-950 pb-24 pt-40 sm:pb-32"
     >
       <Image
-        src="https://images.unsplash.com/photo-1745423099450-2e365ceed37a?auto=format&fit=crop&w=2400&q=80"
-        alt="Boats moored in the harbor at Punta del Este under a bright blue sky"
+        src="https://images.unsplash.com/photo-1642985867592-0d63c6c84609?auto=format&fit=crop&w=2400&q=80"
+        alt="Wide view of the water and city skyline at Punta del Este"
         fill
         priority
         sizes="100vw"
