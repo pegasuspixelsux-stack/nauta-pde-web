@@ -490,100 +490,6 @@ export default function PortEcosystemTabs({ active }: { active: TabId }) {
   );
 }
 
-type FeaturedDealer = {
-  brand: string;
-  tagline: string;
-  image: string;
-};
-
-const FEATURED_DEALERS: FeaturedDealer[] = [
-  {
-    brand: "Azimut",
-    tagline: "Concesionario Autorizado",
-    image:
-      "https://images.unsplash.com/photo-1562281302-809108fd533c?auto=format&fit=crop&w=800&q=80",
-  },
-  {
-    brand: "Sunseeker",
-    tagline: "Concesionario Autorizado",
-    image:
-      "https://images.unsplash.com/photo-1551991619-d46f46154f94?auto=format&fit=crop&w=800&q=80",
-  },
-  {
-    brand: "Pershing",
-    tagline: "Concesionario Autorizado",
-    image:
-      "https://images.unsplash.com/photo-1518528057367-d8618b763ca0?auto=format&fit=crop&w=800&q=80",
-  },
-  {
-    brand: "Riva",
-    tagline: "Concesionario Autorizado",
-    image:
-      "https://images.unsplash.com/photo-1601183054392-d956c9315c27?auto=format&fit=crop&w=800&q=80",
-  },
-  {
-    brand: "Beneteau",
-    tagline: "Concesionario Autorizado",
-    image:
-      "https://images.unsplash.com/photo-1534196143787-f563337ca933?auto=format&fit=crop&w=800&q=80",
-  },
-  {
-    brand: "Jeanneau",
-    tagline: "Concesionario Autorizado",
-    image:
-      "https://images.unsplash.com/photo-1574737685024-7b53d9828481?auto=format&fit=crop&w=800&q=80",
-  },
-  {
-    brand: "Hallberg-Rassy",
-    tagline: "Concesionario Autorizado",
-    image:
-      "https://images.unsplash.com/photo-1545148481-9b89ba700876?auto=format&fit=crop&w=800&q=80",
-  },
-  {
-    brand: "Oyster Yachts",
-    tagline: "Concesionario Autorizado",
-    image:
-      "https://images.unsplash.com/photo-1741183575544-ae96e3c8c221?auto=format&fit=crop&w=800&q=80",
-  },
-];
-
-function DealerScroller() {
-  return (
-    <div className="mb-12">
-      <p className="mb-4 text-[13px] font-medium tracking-[0.2em] text-neutral-500">
-        MARCAS Y CONCESIONARIOS DESTACADOS
-      </p>
-      <div className="-mx-6 flex snap-x snap-mandatory gap-4 overflow-x-auto px-6 pb-2 sm:-mx-8 sm:px-8 lg:-mx-12 lg:px-12">
-        {FEATURED_DEALERS.map((dealer) => (
-          <div
-            key={dealer.brand}
-            className="group relative w-40 shrink-0 snap-start overflow-hidden rounded-xl border border-neutral-100 sm:w-48"
-          >
-            <div className="relative aspect-[4/3]">
-              <Image
-                src={dealer.image}
-                alt={`${dealer.brand}, concesionario autorizado de yates en Punta del Este`}
-                fill
-                sizes="192px"
-                className="object-cover transition-transform duration-500 ease-out group-hover:scale-105"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-neutral-950/70 via-neutral-950/10 to-transparent" />
-            </div>
-            <div className="absolute inset-x-0 bottom-0 p-3">
-              <p className="text-sm font-semibold tracking-tight text-white">
-                {dealer.brand}
-              </p>
-              <p className="text-[11px] font-medium tracking-wide text-white/70">
-                {dealer.tagline}
-              </p>
-            </div>
-          </div>
-        ))}
-      </div>
-    </div>
-  );
-}
-
 type LocalBusiness = {
   name: string;
   rating?: number;
@@ -591,9 +497,66 @@ type LocalBusiness = {
   status?: string;
   description: string;
   brands?: string[];
+  image: string;
 };
 
 const LOCAL_BUSINESSES: LocalBusiness[] = [
+  {
+    name: "Azimut",
+    category: "Concesionario Autorizado",
+    description: "Concesionario autorizado de la marca en Punta del Este.",
+    image:
+      "https://images.unsplash.com/photo-1562281302-809108fd533c?auto=format&fit=crop&w=800&q=80",
+  },
+  {
+    name: "Sunseeker",
+    category: "Concesionario Autorizado",
+    description: "Concesionario autorizado de la marca en Punta del Este.",
+    image:
+      "https://images.unsplash.com/photo-1551991619-d46f46154f94?auto=format&fit=crop&w=800&q=80",
+  },
+  {
+    name: "Pershing",
+    category: "Concesionario Autorizado",
+    description: "Concesionario autorizado de la marca en Punta del Este.",
+    image:
+      "https://images.unsplash.com/photo-1518528057367-d8618b763ca0?auto=format&fit=crop&w=800&q=80",
+  },
+  {
+    name: "Riva",
+    category: "Concesionario Autorizado",
+    description: "Concesionario autorizado de la marca en Punta del Este.",
+    image:
+      "https://images.unsplash.com/photo-1601183054392-d956c9315c27?auto=format&fit=crop&w=800&q=80",
+  },
+  {
+    name: "Beneteau",
+    category: "Concesionario Autorizado",
+    description: "Concesionario autorizado de la marca en Punta del Este.",
+    image:
+      "https://images.unsplash.com/photo-1534196143787-f563337ca933?auto=format&fit=crop&w=800&q=80",
+  },
+  {
+    name: "Jeanneau",
+    category: "Concesionario Autorizado",
+    description: "Concesionario autorizado de la marca en Punta del Este.",
+    image:
+      "https://images.unsplash.com/photo-1574737685024-7b53d9828481?auto=format&fit=crop&w=800&q=80",
+  },
+  {
+    name: "Hallberg-Rassy",
+    category: "Concesionario Autorizado",
+    description: "Concesionario autorizado de la marca en Punta del Este.",
+    image:
+      "https://images.unsplash.com/photo-1545148481-9b89ba700876?auto=format&fit=crop&w=800&q=80",
+  },
+  {
+    name: "Oyster Yachts",
+    category: "Concesionario Autorizado",
+    description: "Concesionario autorizado de la marca en Punta del Este.",
+    image:
+      "https://images.unsplash.com/photo-1741183575544-ae96e3c8c221?auto=format&fit=crop&w=800&q=80",
+  },
   {
     name: "El Muelle",
     rating: 4.7,
@@ -608,18 +571,24 @@ const LOCAL_BUSINESSES: LocalBusiness[] = [
       "Fountaine Pajot",
       "Sealegs",
     ],
+    image:
+      "https://images.unsplash.com/photo-1562281302-809108fd533c?auto=format&fit=crop&w=800&q=80",
   },
   {
     name: "Nordica Sur",
     category: "Concesionario",
     description: "Opera regionalmente en Punta del Este.",
     brands: ["Saxdor Yachts"],
+    image:
+      "https://images.unsplash.com/photo-1518528057367-d8618b763ca0?auto=format&fit=crop&w=800&q=80",
   },
   {
     name: "Náutica de Punta",
     category: "Concesionario",
     description: "Ubicado en la zona de Maldonado y Punta del Este.",
     brands: ["Yamaha Marine", "Saxdor"],
+    image:
+      "https://images.unsplash.com/photo-1601183054392-d956c9315c27?auto=format&fit=crop&w=800&q=80",
   },
   {
     name: "Mar Adentro Barcos",
@@ -628,6 +597,8 @@ const LOCAL_BUSINESSES: LocalBusiness[] = [
     status: "Cerrado · Abre 10:00 sáb",
     description:
       "Sobre la Rambla General Artigas. Se especializa en venta de embarcaciones y equipamiento náutico. Horario estándar de lunes a viernes, reducido los sábados.",
+    image:
+      "https://images.unsplash.com/photo-1551991619-d46f46154f94?auto=format&fit=crop&w=800&q=80",
   },
   {
     name: "Aeromarine S.A.",
@@ -636,6 +607,8 @@ const LOCAL_BUSINESSES: LocalBusiness[] = [
     status: "Cerrado · Abre 10:00 sáb",
     description:
       "En la Calle 17, atiende las necesidades náuticas locales. Cuenta con tienda online de accesorios y equipamiento marino. Abierto en tardes seleccionadas y fines de semana.",
+    image:
+      "https://images.unsplash.com/photo-1574737685024-7b53d9828481?auto=format&fit=crop&w=800&q=80",
   },
   {
     name: "CENTRO NAUTICO",
@@ -644,6 +617,8 @@ const LOCAL_BUSINESSES: LocalBusiness[] = [
     status: "Cerrado · Abre 10:00 sáb",
     description:
       "Insumos náuticos y servicios de concesionaria cerca de la Avenida Río Branco. Abierto de lunes a sábado en horario matutino.",
+    image:
+      "https://images.unsplash.com/photo-1465429108843-b037568eb231?auto=format&fit=crop&w=800&q=80",
   },
   {
     name: "Nautik&Road",
@@ -652,6 +627,8 @@ const LOCAL_BUSINESSES: LocalBusiness[] = [
     status: "Cerrado · Abre 10:00 sáb",
     description:
       "Sobre la Ruta Interbalnearia. Combina oferta náutica con servicios para vehículos y trailers. Horario partido por la tarde en días de semana.",
+    image:
+      "https://images.unsplash.com/photo-1745423099450-2e365ceed37a?auto=format&fit=crop&w=800&q=80",
   },
   {
     name: "Altamar punta",
@@ -659,6 +636,8 @@ const LOCAL_BUSINESSES: LocalBusiness[] = [
     status: "Abierto",
     description:
       "Atiende a los amantes de la náutica en la región de Maldonado y Punta del Este, con disponibilidad continua las 24 horas.",
+    image:
+      "https://images.unsplash.com/photo-1725830674531-794510b656e9?auto=format&fit=crop&w=800&q=80",
   },
   {
     name: "Alquiler de Barcos y Yates",
@@ -667,6 +646,8 @@ const LOCAL_BUSINESSES: LocalBusiness[] = [
     status: "Abierto",
     description:
       "Sobre la Calle Virazón, cerca del puerto. Alquiler marítimo y servicios de embarcaciones, abierto las 24 horas.",
+    image:
+      "https://images.unsplash.com/photo-1534196143787-f563337ca933?auto=format&fit=crop&w=800&q=80",
   },
   {
     name: "Alquiler de yates en Punta del Este",
@@ -675,6 +656,8 @@ const LOCAL_BUSINESSES: LocalBusiness[] = [
     status: "Abierto · Cierra 20:00",
     description:
       "Opera desde el Muelle Principal del puerto. Servicios de yates y operación de embarcaciones, con horario extendido hasta la noche.",
+    image:
+      "https://images.unsplash.com/photo-1505802641929-aeef461d81eb?auto=format&fit=crop&w=800&q=80",
   },
   {
     name: "Alquiler de barcos Popey",
@@ -683,6 +666,8 @@ const LOCAL_BUSINESSES: LocalBusiness[] = [
     status: "Cerrado · Abre 9:00 sáb",
     description:
       "Presencia consolidada dentro del puerto de Punta del Este. Muy bien calificado por sus servicios de alquiler y charter de embarcaciones.",
+    image:
+      "https://images.unsplash.com/photo-1530334269045-744542eef9a2?auto=format&fit=crop&w=800&q=80",
   },
   {
     name: "Servicios Náuticos",
@@ -691,6 +676,8 @@ const LOCAL_BUSINESSES: LocalBusiness[] = [
     status: "Cerrado · Abre 10:00 lun",
     description:
       "Sobre la Rambla General Artigas. Soporte técnico y náutico especializado para propietarios locales, de lunes a viernes.",
+    image:
+      "https://images.unsplash.com/photo-1685198905408-3eca50bca6f7?auto=format&fit=crop&w=800&q=80",
   },
   {
     name: "Yacht Club",
@@ -699,43 +686,57 @@ const LOCAL_BUSINESSES: LocalBusiness[] = [
     status: "Abierto · Cierra 0:50 sáb",
     description:
       "Yacht Club Uruguayo / sede de la marina de Punta del Este. Pilar institucional de la comunidad náutica, en el corazón de la infraestructura portuaria.",
+    image:
+      "https://images.unsplash.com/photo-1741183575544-ae96e3c8c221?auto=format&fit=crop&w=800&q=80",
   },
 ];
 
-function MoreDealersSection() {
+function DealersSection() {
   return (
     <div className="mb-16">
       <p className="mb-6 text-[13px] font-medium tracking-[0.2em] text-neutral-500">
-        MÁS CONCESIONARIOS Y PROVEEDORES NÁUTICOS
+        MARCAS Y CONCESIONARIOS DESTACADOS
       </p>
-      <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="-mx-6 flex snap-x snap-mandatory gap-4 overflow-x-auto px-6 pb-2 sm:-mx-8 sm:px-8 lg:-mx-12 lg:px-12">
         {LOCAL_BUSINESSES.map((biz) => (
           <div
             key={biz.name}
-            className="rounded-xl border border-neutral-100 bg-neutral-50 p-6"
+            className="w-72 shrink-0 snap-start overflow-hidden rounded-xl border border-neutral-100 bg-neutral-50"
           >
-            <div className="flex items-start justify-between gap-3">
-              <h3 className="text-base font-semibold tracking-tight text-neutral-900">
-                {biz.name}
-              </h3>
-              {biz.rating && (
-                <span className="shrink-0 whitespace-nowrap text-sm font-medium text-neutral-700">
-                  ★ {biz.rating.toFixed(1)}
-                </span>
+            <div className="relative aspect-[4/3]">
+              <Image
+                src={biz.image}
+                alt={`${biz.name}, ${biz.category.toLowerCase()} en Punta del Este`}
+                fill
+                sizes="288px"
+                className="object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-neutral-950/80 via-neutral-950/10 to-transparent" />
+              <div className="absolute inset-x-0 bottom-0 flex items-start justify-between gap-3 p-4">
+                <h3 className="text-base font-semibold tracking-tight text-white">
+                  {biz.name}
+                </h3>
+                {biz.rating && (
+                  <span className="shrink-0 whitespace-nowrap text-sm font-medium text-white">
+                    ★ {biz.rating.toFixed(1)}
+                  </span>
+                )}
+              </div>
+            </div>
+            <div className="p-6">
+              <p className="text-xs font-medium tracking-wide text-neutral-500">
+                {biz.category}
+                {biz.status ? ` · ${biz.status}` : ""}
+              </p>
+              <p className="mt-3 text-sm leading-relaxed text-neutral-600">
+                {biz.description}
+              </p>
+              {biz.brands && (
+                <p className="mt-3 text-xs font-medium text-neutral-500">
+                  Marcas: {biz.brands.join(", ")}
+                </p>
               )}
             </div>
-            <p className="mt-1 text-xs font-medium tracking-wide text-neutral-500">
-              {biz.category}
-              {biz.status ? ` · ${biz.status}` : ""}
-            </p>
-            <p className="mt-3 text-sm leading-relaxed text-neutral-600">
-              {biz.description}
-            </p>
-            {biz.brands && (
-              <p className="mt-3 text-xs font-medium text-neutral-500">
-                Marcas: {biz.brands.join(", ")}
-              </p>
-            )}
           </div>
         ))}
       </div>
@@ -792,8 +793,7 @@ function ClassifiedsPanel() {
 
   return (
     <div>
-      <DealerScroller />
-      <MoreDealersSection />
+      <DealersSection />
 
       <div className="grid grid-cols-1 gap-10 lg:grid-cols-[240px_1fr] lg:gap-12">
         <aside className="flex flex-col gap-8 lg:sticky lg:top-40 lg:self-start">
