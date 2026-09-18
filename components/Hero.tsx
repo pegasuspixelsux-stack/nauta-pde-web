@@ -39,7 +39,7 @@ export default function Hero({
         className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-neutral-950/40 to-transparent"
       />
 
-      <div className="relative mx-auto w-full max-w-7xl px-6 sm:px-8 lg:px-12">
+      <div className="relative mx-auto flex w-full max-w-7xl flex-col items-center px-6 text-center sm:px-8 lg:px-12">
         <motion.p
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
@@ -62,7 +62,7 @@ export default function Hero({
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2, ease: EASE }}
-          className="mt-8 max-w-xl text-lg leading-relaxed text-white/80 sm:text-xl"
+          className="mx-auto mt-8 max-w-xl text-lg leading-relaxed text-white/80 sm:text-xl"
         >
           Curated motor yachts and bluewater sailing yachts, offered to a
           discerning few along the Atlantic&rsquo;s most exclusive coastline.
@@ -73,7 +73,7 @@ export default function Hero({
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.28, ease: EASE }}
           onSubmit={(e) => e.preventDefault()}
-          className="mt-10 flex max-w-xl items-center gap-2 rounded-full border border-white/20 bg-white/10 p-1.5 pl-5 backdrop-blur-md transition-colors duration-200 focus-within:border-white/40"
+          className="mx-auto mt-10 flex w-full max-w-xl items-center gap-2 rounded-full border border-white/20 bg-white/10 p-1.5 pl-5 backdrop-blur-md transition-colors duration-200 focus-within:border-white/40"
         >
           <svg
             viewBox="0 0 24 24"
@@ -103,7 +103,7 @@ export default function Hero({
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.32, ease: EASE }}
-          className="mt-6 flex flex-wrap gap-2"
+          className="mt-6 flex flex-wrap justify-center gap-2"
         >
           {TABS.map((tab) => (
             <a
