@@ -5,6 +5,39 @@ import { motion } from "framer-motion";
 
 const EASE = [0.22, 1, 0.36, 1] as const;
 
+type ExperienceCategory = {
+  label: string;
+  image: string;
+};
+
+const EXPERIENCE_CATEGORIES: ExperienceCategory[] = [
+  {
+    label: "Arte y Cultura",
+    image:
+      "https://images.unsplash.com/photo-1518998053901-5348d3961a04?auto=format&fit=crop&w=900&q=80",
+  },
+  {
+    label: "Deporte y Salud",
+    image:
+      "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=900&q=80",
+  },
+  {
+    label: "Excursiones",
+    image:
+      "https://images.unsplash.com/photo-1547036967-23d11aacaee0?auto=format&fit=crop&w=900&q=80",
+  },
+  {
+    label: "Gastronomía",
+    image:
+      "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=900&q=80",
+  },
+  {
+    label: "Para los Chicos",
+    image:
+      "https://images.unsplash.com/photo-1516627145497-ae6968895b74?auto=format&fit=crop&w=900&q=80",
+  },
+];
+
 export default function ExperiencesSection() {
   return (
     <section className="bg-neutral-50 py-32 sm:py-40">
@@ -63,6 +96,32 @@ export default function ExperiencesSection() {
               className="object-cover"
             />
           </motion.div>
+        </div>
+
+        <div className="mt-20 sm:mt-24">
+          <p className="mb-6 text-[13px] font-medium tracking-[0.2em] text-neutral-500">
+            MÁS EXPERIENCIAS
+          </p>
+          <div className="-mx-6 flex snap-x snap-mandatory gap-4 overflow-x-auto px-6 pb-2 sm:-mx-8 sm:px-8 lg:-mx-12 lg:px-12">
+            {EXPERIENCE_CATEGORIES.map((category) => (
+              <div
+                key={category.label}
+                className="relative aspect-[3/4] w-64 shrink-0 snap-start overflow-hidden rounded-xl sm:w-72"
+              >
+                <Image
+                  src={category.image}
+                  alt={category.label}
+                  fill
+                  sizes="288px"
+                  className="object-cover"
+                />
+                <div className="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-neutral-950/90 via-neutral-950/40 to-transparent" />
+                <p className="absolute inset-x-0 bottom-0 p-5 text-base font-semibold tracking-tight text-white">
+                  {category.label}
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
