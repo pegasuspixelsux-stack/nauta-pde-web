@@ -1,14 +1,15 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Link from "next/link";
 import { AnimatePresence, motion } from "framer-motion";
 import Logo from "./Logo";
 import { TABS, type TabId } from "@/lib/portEcosystem";
 
 const LINKS = [
-  { label: "Flota", href: "#fleet" },
-  { label: "Santuario del Puerto", href: "#heritage" },
-  { label: "Herencia", href: "#heritage" },
+  { label: "Flota", href: "/#fleet" },
+  { label: "Tiendas", href: "/tiendas" },
+  { label: "Herencia", href: "/#heritage" },
   { label: "Consultas", href: "#contact" },
 ];
 
@@ -38,9 +39,9 @@ export default function Navbar({
       }`}
     >
       <nav className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6 sm:px-8 lg:px-12">
-        <a href="#top">
+        <Link href="/">
           <Logo light={!scrolled} />
-        </a>
+        </Link>
 
         <ul className="hidden items-center gap-10 tab-lg:flex">
           {LINKS.map((link) => (
@@ -132,9 +133,9 @@ export default function Navbar({
               </p>
               <div className="flex flex-wrap gap-2">
                 {TABS.map((tab) => (
-                  <a
+                  <Link
                     key={tab.id}
-                    href="#fleet"
+                    href="/#fleet"
                     onClick={() => {
                       onChange(tab.id);
                       setMenuOpen(false);
@@ -146,7 +147,7 @@ export default function Navbar({
                     }`}
                   >
                     {tab.label}
-                  </a>
+                  </Link>
                 ))}
               </div>
             </div>

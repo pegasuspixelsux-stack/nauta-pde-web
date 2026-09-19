@@ -4,8 +4,11 @@ import { useState } from "react";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import WelcomeSection from "@/components/WelcomeSection";
+import PortCategoriesSection from "@/components/PortCategoriesSection";
 import PortEcosystemTabs from "@/components/PortEcosystemTabs";
 import BodyContent from "@/components/BodyContent";
+import FashionSection from "@/components/FashionSection";
+import ExperiencesSection from "@/components/ExperiencesSection";
 import PortInfoSection from "@/components/PortInfoSection";
 import Footer from "@/components/Footer";
 import type { TabId } from "@/lib/portEcosystem";
@@ -19,8 +22,11 @@ export default function Home() {
       <main className="flex flex-1 flex-col">
         <Hero active={active} onChange={setActive} />
         <WelcomeSection />
+        <PortCategoriesSection active={active} onChange={setActive} />
         <PortEcosystemTabs active={active} />
         <BodyContent />
+        <FashionSection />
+        <ExperiencesSection />
         <PortInfoSection />
       </main>
       <Footer />

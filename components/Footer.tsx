@@ -4,9 +4,9 @@ const COLUMNS = [
   {
     title: "Navegación",
     links: [
-      { label: "Flota", href: "#fleet" },
-      { label: "Santuario del Puerto", href: "#heritage" },
-      { label: "Herencia", href: "#heritage" },
+      { label: "Flota", href: "/#fleet" },
+      { label: "Tiendas", href: "/tiendas" },
+      { label: "Herencia", href: "/#heritage" },
     ],
   },
   {
