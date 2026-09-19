@@ -17,6 +17,6 @@ export const TABS: { id: TabId; label: string }[] = [
   { id: "supplies", label: "Insumos" },
   { id: "groceries", label: "Almacén" },
   { id: "lodging", label: "Alojamiento" },
-  { id: "car-rental", label: "Alquiler de Autos" },
+  { id: "car-rental", label: "Rent Autos" },
   { id: "crew", label: "Empleo" },
 ];

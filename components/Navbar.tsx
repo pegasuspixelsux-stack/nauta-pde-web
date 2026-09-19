@@ -42,7 +42,7 @@ export default function Navbar({
           <Logo light={!scrolled} />
         </a>
 
-        <ul className="hidden items-center gap-10 md:flex">
+        <ul className="hidden items-center gap-10 tab-lg:flex">
           {LINKS.map((link) => (
             <li key={link.label}>
               <a
@@ -55,7 +55,7 @@ export default function Navbar({
           ))}
         </ul>
 
-        <div className="hidden md:block">
+        <div className="hidden tab-lg:block">
           <a
             href="#contact"
             className="inline-flex items-center rounded-full bg-neutral-900 px-5 py-2 text-[13px] font-medium text-white transition-transform duration-200 ease-out active:scale-[0.96]"
@@ -69,7 +69,7 @@ export default function Navbar({
           onClick={() => setMenuOpen((v) => !v)}
           aria-expanded={menuOpen}
           aria-label="Alternar menú de navegación"
-          className={`flex h-9 w-9 items-center justify-center rounded-full transition-colors duration-300 md:hidden ${
+          className={`flex h-9 w-9 items-center justify-center rounded-full transition-colors duration-300 tab-lg:hidden ${
             scrolled || menuOpen ? "text-neutral-900" : "text-white"
           }`}
         >
@@ -97,7 +97,7 @@ export default function Navbar({
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
-            className="overflow-hidden border-b border-neutral-100 bg-white/95 backdrop-blur-md md:hidden"
+            className="overflow-hidden border-b border-neutral-100 bg-white/95 backdrop-blur-md tab-lg:hidden"
           >
             <ul className="flex flex-col gap-1 px-6 py-4">
               {LINKS.map((link) => (

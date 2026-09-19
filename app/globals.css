@@ -12,6 +12,14 @@
   --font-mono: var(--font-geist-mono);
 }
 
+/* Extra breakpoints: tab-sm sits between mobile (sm/640px) and
+   tablet (md/768px); tab-lg sits between tablet (md/768px) and
+   desktop (lg/1024px). */
+@theme {
+  --breakpoint-tab-sm: 700px;
+  --breakpoint-tab-lg: 900px;
+}
+
 html {
   scroll-behavior: smooth;
 }
