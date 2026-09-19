@@ -166,7 +166,7 @@ export default function PuntaDelEstePage() {
   return (
     <>
       <Navbar active={active} onChange={setActive} />
-      <main className="flex flex-1 flex-col pt-16">
+      <main className="flex flex-1 flex-col">
         <section className="relative flex min-h-[70vh] items-end overflow-hidden bg-blue-950 pb-20 pt-32">
           <Image
             src="https://images.unsplash.com/photo-1616959313137-186688889054?auto=format&fit=crop&w=2400&q=80"
