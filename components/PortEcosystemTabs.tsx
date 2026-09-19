@@ -568,16 +568,23 @@ const LOCAL_BUSINESSES: LocalBusiness[] = [
 ];
 
 function DealersSection() {
+  const items = [...LOCAL_BUSINESSES, ...LOCAL_BUSINESSES];
+
   return (
     <div className="mb-16">
       <p className="mb-6 text-[13px] font-medium tracking-[0.2em] text-neutral-500">
         MARCAS Y CONCESIONARIOS DESTACADOS
       </p>
-      <div className="-mx-6 flex snap-x snap-mandatory gap-4 overflow-x-auto px-6 pb-2 sm:-mx-8 sm:px-8 lg:-mx-12 lg:px-12">
-        {LOCAL_BUSINESSES.map((biz) => (
+      <div className="relative -mx-6 overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_5%,black_95%,transparent)] sm:-mx-8 lg:-mx-12">
+        <motion.div
+          className="flex w-max gap-4 px-6 sm:px-8 lg:px-12"
+          animate={{ x: ["0%", "-50%"] }}
+          transition={{ duration: 60, ease: "linear", repeat: Infinity }}
+        >
+          {items.map((biz, i) => (
           <div
-            key={biz.name}
-            className="relative aspect-[3/4] w-72 shrink-0 snap-start overflow-hidden rounded-xl"
+            key={`${biz.name}-${i}`}
+            className="relative aspect-[3/4] w-72 shrink-0 overflow-hidden rounded-xl"
           >
             <Image
               src={biz.image}
@@ -612,7 +619,8 @@ function DealersSection() {
               )}
             </div>
           </div>
-        ))}
+          ))}
+        </motion.div>
       </div>
     </div>
   );

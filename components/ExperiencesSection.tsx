@@ -102,25 +102,31 @@ export default function ExperiencesSection() {
           <p className="mb-6 text-[13px] font-medium tracking-[0.2em] text-neutral-500">
             MÁS EXPERIENCIAS
           </p>
-          <div className="-mx-6 flex snap-x snap-mandatory gap-4 overflow-x-auto px-6 pb-2 sm:-mx-8 sm:px-8 lg:-mx-12 lg:px-12">
-            {EXPERIENCE_CATEGORIES.map((category) => (
-              <div
-                key={category.label}
-                className="relative aspect-[3/4] w-64 shrink-0 snap-start overflow-hidden rounded-xl sm:w-72"
-              >
-                <Image
-                  src={category.image}
-                  alt={category.label}
-                  fill
-                  sizes="288px"
-                  className="object-cover"
-                />
-                <div className="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-neutral-950/90 via-neutral-950/40 to-transparent" />
-                <p className="absolute inset-x-0 bottom-0 p-5 text-base font-semibold tracking-tight text-white">
-                  {category.label}
-                </p>
-              </div>
-            ))}
+          <div className="relative -mx-6 overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_5%,black_95%,transparent)] sm:-mx-8 lg:-mx-12">
+            <motion.div
+              className="flex w-max gap-4 px-6 sm:px-8 lg:px-12"
+              animate={{ x: ["0%", "-50%"] }}
+              transition={{ duration: 50, ease: "linear", repeat: Infinity }}
+            >
+              {[...EXPERIENCE_CATEGORIES, ...EXPERIENCE_CATEGORIES].map((category, i) => (
+                <div
+                  key={`${category.label}-${i}`}
+                  className="relative aspect-[3/4] w-64 shrink-0 overflow-hidden rounded-xl sm:w-72"
+                >
+                  <Image
+                    src={category.image}
+                    alt={category.label}
+                    fill
+                    sizes="288px"
+                    className="object-cover"
+                  />
+                  <div className="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-neutral-950/90 via-neutral-950/40 to-transparent" />
+                  <p className="absolute inset-x-0 bottom-0 p-5 text-base font-semibold tracking-tight text-white">
+                    {category.label}
+                  </p>
+                </div>
+              ))}
+            </motion.div>
           </div>
         </div>
       </div>
