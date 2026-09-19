@@ -47,7 +47,11 @@ export default function Navbar({
             <li key={link.label}>
               <a
                 href={link.href}
-                className="text-[13px] font-medium text-neutral-600 transition-colors hover:text-neutral-950"
+                className={`text-[13px] font-medium transition-colors duration-300 ${
+                  scrolled
+                    ? "text-neutral-600 hover:text-neutral-950"
+                    : "text-white/80 hover:text-white"
+                }`}
               >
                 {link.label}
               </a>
