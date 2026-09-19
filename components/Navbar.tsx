@@ -9,6 +9,7 @@ import { TABS, type TabId } from "@/lib/portEcosystem";
 const LINKS = [
   { label: "Flota", href: "/#fleet" },
   { label: "Tiendas", href: "/tiendas" },
+  { label: "Destino", href: "/punta-del-este" },
   { label: "Herencia", href: "/#heritage" },
   { label: "Consultas", href: "#contact" },
 ];

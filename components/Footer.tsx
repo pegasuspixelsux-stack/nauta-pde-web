@@ -6,6 +6,7 @@ const COLUMNS = [
     links: [
       { label: "Flota", href: "/#fleet" },
       { label: "Tiendas", href: "/tiendas" },
+      { label: "Destino", href: "/punta-del-este" },
       { label: "Herencia", href: "/#heritage" },
     ],
   },
