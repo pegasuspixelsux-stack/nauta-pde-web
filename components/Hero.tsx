@@ -106,7 +106,7 @@ export default function Hero({
   return (
     <section
       id="top"
-      className="relative flex min-h-screen items-end overflow-hidden bg-neutral-950 pb-24 pt-40 sm:pb-32"
+      className="relative flex min-h-screen items-end overflow-hidden bg-blue-950 pb-24 pt-40 sm:pb-32"
     >
       <Image
         src="https://images.unsplash.com/photo-1642985867592-0d63c6c84609?auto=format&fit=crop&w=2400&q=80"
@@ -118,15 +118,15 @@ export default function Hero({
       />
       <div
         aria-hidden
-        className="absolute inset-0 bg-gradient-to-t from-neutral-950/50 via-neutral-950/28 to-neutral-950/5"
+        className="absolute inset-0 bg-gradient-to-t from-blue-950/60 via-blue-950/30 to-blue-950/10"
       />
       <div
         aria-hidden
-        className="absolute inset-0 bg-gradient-to-r from-neutral-950/20 via-transparent to-neutral-950/20"
+        className="absolute inset-0 bg-gradient-to-r from-blue-950/25 via-transparent to-blue-950/25"
       />
       <div
         aria-hidden
-        className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-neutral-950/40 to-transparent"
+        className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-blue-950/45 to-transparent"
       />
 
       <div className="relative mx-auto flex w-full max-w-7xl flex-col items-center px-6 text-center sm:px-8 lg:px-12">
