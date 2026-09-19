@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
+import WelcomeSection from "@/components/WelcomeSection";
 import PortEcosystemTabs from "@/components/PortEcosystemTabs";
 import BodyContent from "@/components/BodyContent";
 import PortInfoSection from "@/components/PortInfoSection";
@@ -17,6 +18,7 @@ export default function Home() {
       <Navbar active={active} onChange={setActive} />
       <main className="flex flex-1 flex-col">
         <Hero active={active} onChange={setActive} />
+        <WelcomeSection />
         <PortEcosystemTabs active={active} />
         <BodyContent />
         <PortInfoSection />
