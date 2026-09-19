@@ -7,7 +7,7 @@ const EASE = [0.22, 1, 0.36, 1] as const;
 
 export default function WelcomeSection() {
   return (
-    <section className="bg-white py-32 sm:py-40">
+    <section id="welcome" className="bg-white py-32 sm:py-40">
       <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12">
         <div className="grid grid-cols-1 items-center gap-16 lg:grid-cols-2 lg:gap-20">
           <motion.div

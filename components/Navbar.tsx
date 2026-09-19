@@ -60,14 +60,37 @@ export default function Navbar({
           ))}
         </ul>
 
-        <div className="hidden tab-lg:block">
-          <a
-            href="#contact"
-            className="inline-flex items-center rounded-full bg-neutral-900 px-5 py-2 text-[13px] font-medium text-white transition-transform duration-200 ease-out active:scale-[0.96]"
+        <form
+          onSubmit={(e) => e.preventDefault()}
+          className={`hidden items-center gap-2 rounded-full border px-3.5 py-2 backdrop-blur-md transition-colors duration-300 tab-lg:flex ${
+            scrolled
+              ? "border-neutral-200 bg-neutral-100 focus-within:border-neutral-300"
+              : "border-white/25 bg-white/10 focus-within:border-white/45"
+          }`}
+        >
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth={2}
+            className={`h-4 w-4 shrink-0 transition-colors duration-300 ${
+              scrolled ? "text-neutral-400" : "text-white/60"
+            }`}
+            aria-hidden
           >
-            Visitas Privadas
-          </a>
-        </div>
+            <circle cx="11" cy="11" r="7" />
+            <path d="m20 20-3.5-3.5" strokeLinecap="round" />
+          </svg>
+          <input
+            type="text"
+            placeholder="Buscá yates, servicios..."
+            className={`w-40 bg-transparent text-[13px] focus:outline-none xl:w-52 ${
+              scrolled
+                ? "text-neutral-900 placeholder:text-neutral-400"
+                : "text-white placeholder:text-white/50"
+            }`}
+          />
+        </form>
 
         <button
           type="button"

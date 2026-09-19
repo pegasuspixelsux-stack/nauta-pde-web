@@ -20,7 +20,7 @@ export default function Home() {
     <>
       <Navbar active={active} onChange={setActive} />
       <main className="flex flex-1 flex-col">
-        <Hero active={active} onChange={setActive} />
+        <Hero />
         <WelcomeSection />
         <PortCategoriesSection active={active} onChange={setActive} />
         <PortEcosystemTabs active={active} />

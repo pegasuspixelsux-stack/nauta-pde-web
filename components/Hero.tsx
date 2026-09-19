@@ -2,18 +2,10 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { TABS, type TabId } from "@/lib/portEcosystem";
-import TabIcon from "./TabIcon";
 
 const EASE = [0.22, 1, 0.36, 1] as const;
 
-export default function Hero({
-  active,
-  onChange,
-}: {
-  active: TabId;
-  onChange: (id: TabId) => void;
-}) {
+export default function Hero() {
   return (
     <section
       id="top"
@@ -70,60 +62,27 @@ export default function Hero({
           Atlántico.
         </motion.p>
 
-        <motion.form
-          initial={{ opacity: 0, y: 18 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.28, ease: EASE }}
-          onSubmit={(e) => e.preventDefault()}
-          className="mx-auto mt-10 flex w-full max-w-xl items-center gap-2 rounded-full border border-white/20 bg-white/10 p-1.5 pl-5 backdrop-blur-md transition-colors duration-200 focus-within:border-white/40"
-        >
-          <svg
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth={2}
-            className="h-4 w-4 shrink-0 text-white/60"
-            aria-hidden
-          >
-            <circle cx="11" cy="11" r="7" />
-            <path d="m20 20-3.5-3.5" strokeLinecap="round" />
-          </svg>
-          <input
-            type="text"
-            placeholder="Buscá yates, servicios, restaurantes..."
-            className="w-full bg-transparent text-sm text-white placeholder:text-white/50 focus:outline-none"
-          />
-          <button
-            type="submit"
-            className="shrink-0 rounded-full bg-white px-5 py-2 text-[13px] font-semibold text-neutral-900 transition-transform duration-200 ease-out hover:scale-[1.02] active:scale-[0.97]"
-          >
-            Buscar
-          </button>
-        </motion.form>
-
-        <motion.div
-          initial={{ opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.32, ease: EASE }}
-          className="mt-6 grid grid-cols-3 gap-2 sm:grid-cols-5"
-        >
-          {TABS.map((tab) => (
-            <a
-              key={tab.id}
-              href="#fleet"
-              onClick={() => onChange(tab.id)}
-              className={`flex w-full items-center justify-center gap-1.5 whitespace-nowrap rounded-full px-3 py-2 text-[13px] font-medium transition-colors duration-200 active:scale-[0.97] ${
-                active === tab.id
-                  ? "bg-white text-neutral-900"
-                  : "border border-white/25 text-white/80 backdrop-blur-sm hover:border-white/50 hover:text-white"
-              }`}
-            >
-              <TabIcon id={tab.id} className="h-3.5 w-3.5 shrink-0" />
-              {tab.label}
-            </a>
-          ))}
-        </motion.div>
       </div>
+
+      <motion.a
+        href="#welcome"
+        aria-label="Desplazarse hacia abajo"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: [0.4, 1, 0.4] }}
+        transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+        className="absolute bottom-8 right-6 z-10 flex h-10 w-10 items-center justify-center rounded-full border border-white/30 text-white sm:bottom-10 sm:right-10"
+      >
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth={2}
+          className="h-4 w-4"
+          aria-hidden
+        >
+          <path strokeLinecap="round" strokeLinejoin="round" d="M12 5v14M5 12l7 7 7-7" />
+        </svg>
+      </motion.a>
     </section>
   );
 }
