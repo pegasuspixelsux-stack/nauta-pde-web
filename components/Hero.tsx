@@ -9,7 +9,7 @@ export default function Hero() {
   return (
     <section
       id="top"
-      className="relative flex min-h-screen items-end overflow-hidden bg-blue-950 pb-24 pt-40 sm:pb-32"
+      className="relative flex min-h-[50vh] items-end overflow-hidden bg-blue-950 pb-10 pt-28 sm:min-h-screen sm:pb-32 sm:pt-40"
     >
       <Image
         src="https://images.unsplash.com/photo-1642985867592-0d63c6c84609?auto=format&fit=crop&w=2400&q=80"
